@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    
-</body>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Janine Wächter | Frontend Developerin</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/assets.css" />
+  </head>
+
+  <body>
+    <header class="header-container">
+      <a class="logo-link" href="#home">[JW]</a>
+
+      <nav class="navigation-links-container">
+        <a class="navigation-link" href="#about-me">Über mich</a>
+        <a class="navigation-link" href="#skills">Skills</a>
+        <a class="navigation-link" href="#portfolio">Portfolio</a>
+        <a class="navigation-link" href="#contact">Kontakt</a>
+      </nav>
+
+      <button class="language-button" type="button">DE</button>
+    </header>
+
+    <main id="home">
+      <section class="hero-section" id="hero">
+        <p class="side-domain-text">janine-waechter.de</p>
+
+        <div class="hero-text-container">
+          <h1 class="hero-main-title">
+            Frontend<br />
+            Developerin
+          </h1>
+
+          <div class="hero-line-and-name-container">
+            <div class="hero-title-line"></div>
+            <p class="hero-name-text">Janine Wächter</p>
+          </div>
+        </div>
+
+        <a class="scroll-down-link" href="#about-me">
+            <img class="scroll-down-arrow-image" src="./assets/img/15. arrow.png" alt="Pfeil nach unten"/>
+            <span class="scroll-text">Scroll<br />Down</span>
+          </a>
+      </section>
+
+      <section class="about-me-section" id="about-me">
+        <div class="about-me-text-container">
+          <h2 class="section-title">Über mich</h2>
+
+          <p class="normal-text">
+            Ich bin Quereinsteigerin aus dem kaufmännischen Bereich und seit zwei Jahren in der IT tätig. 
+            Zur Programmierung hat mich der direkte Draht zwischen Idee und Ergebnis gebracht, also etwas zu bauen, 
+            das funktioniert und einen echten Unterschied macht. In meinem Arbeitsalltag verantworte ich IT-Projekte in einem 
+            mittelständischen Unternehmen, von der Systemeinführung über Projektleitung bis zur Steuerung interner Softwareprojekte. 
+            Mit der Fullstack-Fortbildung baue ich meine Frontend-Skills jetzt gezielt weiter aus.
+          </p>
+
+          <div class="short-info-container">
+            <div class="short-info-line">
+              <img class="short-info-icon" src="./assets/img/house.png" alt="Haus-icon"/>
+              <p class="short-info-text">Wohnhaft in Detmold</p>
+            </div>
+          </div>
+
+          <a class="small-button" href="#contact">Let's talk</a>
+        </div>
+
+        <div class="portrait-image-container">
+          <img
+            class="portrait-image"
+            src="./assets/img/1C9A1711_resized.jpg"
+            alt="Portrait von Janine Wächter"
+          />
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

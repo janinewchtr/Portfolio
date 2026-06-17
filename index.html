@@ -4,23 +4,68 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Janine Wächter | Frontend Developerin</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="./style/style.css" />
     <link rel="stylesheet" href="./style/assets.css" />
   </head>
 
   <body>
     <header class="header-container">
-      <a class="logo-link" href="#home">[JW]</a>
+        <a class="logo-link" href="#home">[JW]</a>
+      
+        <div class="header-right-container">
+          <div class="header-language-container">
+            <button class="header-language-button active-language" type="button">EN</button>
+            <button class="header-language-button" type="button">DE</button>
+          </div>
+      
+          <button class="burger-menu-button" type="button" onclick="openMenu()">
+            <img
+              class="burger-menu-icon"
+              src="./assets/img/12. burger menu S3.png"
+              alt="Menü öffnen"
+            />
+          </button>
+        </div>
+      </header>
 
-      <nav class="navigation-links-container">
-        <a class="navigation-link" href="#about-me">Über mich</a>
-        <a class="navigation-link" href="#skills">Skills</a>
-        <a class="navigation-link" href="#portfolio">Portfolio</a>
-        <a class="navigation-link" href="#contact">Kontakt</a>
-      </nav>
-
-      <button class="language-button" type="button">DE</button>
-    </header>
+      <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-top-container">
+          <a class="logo-link" href="#home" onclick="closeMenu()">[JW]</a>
+      
+          <div class="menu-top-right-container">
+            <div class="language-switch-container">
+              <button class="language-option active-language" type="button">EN</button>
+              <button class="language-option" type="button">DE</button>
+            </div>
+      
+            <button class="close-menu-button" type="button" onclick="closeMenu()">×</button>
+          </div>
+        </div>
+      
+        <nav class="menu-links-container">
+          <a class="menu-big-link" href="#about-me" onclick="closeMenu()">About me</a>
+          <a class="menu-big-link" href="#skills" onclick="closeMenu()">My skills</a>
+          <a class="menu-big-link" href="#portfolio" onclick="closeMenu()">Portfolio</a>
+        </nav>
+      
+        <div class="menu-black-bottom-section">
+          <div class="menu-contact-container">
+            <h2 class="menu-contact-title">Say Hi!</h2>
+            <a class="menu-email-link" href="mailto:janinewaechter95@gmail.com">
+                janinewaechter95@gmail.com
+            </a>
+          </div>
+      
+          <div class="menu-social-links-container">
+            <a class="menu-social-link" href="#" aria-label="GitHub">GH</a>
+            <a class="menu-social-link" href="mailto:janine@janine-waechter.de" aria-label="E-Mail">
+              @
+            </a>
+            <a class="menu-social-link" href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
 
     <main id="home">
       <section class="hero-section" id="hero">
@@ -74,6 +119,58 @@
             alt="Portrait von Janine Wächter"
           />
         </div>
+      </section>
+
+      <section class="skills-section" id="skills">
+        <img class="skills-arrow-top" src="./assets/img/15. arrow.png" alt="" />
+      
+        <div class="skills-box">
+          <h2 class="skills-title">Meine Skills</h2>
+      
+          <div class="skills-icons-container">
+            <div class="single-skill-container">
+              <img class="skill-icon" src="./assets/img/angular1.png" alt="" />
+              <p class="skill-name">Angular</p>
+            </div>
+      
+            <div class="single-skill-container">
+              <img class="skill-icon" src="./assets/img/javascript1.png" alt="" />
+              <p class="skill-name">JavaScript</p>
+            </div>
+      
+            <div class="single-skill-container">
+              <img class="skill-icon" src="./assets/img/html1.png" alt="" />
+              <p class="skill-name">HTML</p>
+            </div>
+      
+            <div class="single-skill-container">
+              <img class="skill-icon" src="./assets/img/css1.png" alt="" />
+              <p class="skill-name">CSS</p>
+            </div>
+      
+            <div class="single-skill-container">
+              <img class="skill-icon" src="./assets/img/git1.png" alt="" />
+              <p class="skill-name">Git</p>
+            </div>
+      
+            <div class="single-skill-container">
+              <img class="skill-icon" src="./assets/img/api1.png" alt="" />
+              <p class="skill-name">REST-API</p>
+            </div>
+          </div>
+      
+          <div class="skills-contact-container">
+            <img class="skills-learn-icon" src="./assets/img/learn.png" alt="" />
+      
+            <p class="skills-contact-text">
+              Du findest den gesuchten Skill nicht?
+              <a class="skills-contact-link" href="#contact">Schreib mir.</a>
+              Ich bin immer bereit zu lernen!
+            </p>
+          </div>
+        </div>
+      
+        <img class="skills-arrow-bottom" src="./assets/img/15. arrow.png" alt="" />
       </section>
     </main>
   </body>

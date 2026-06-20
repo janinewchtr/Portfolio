@@ -178,7 +178,7 @@
     align-items: center;
     display: flex;
     font-family: "Syne", Arial, sans-serif;
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 800;
     gap: 38px;
     line-height: 0.95;
@@ -229,18 +229,18 @@
   }
   
   .menu-social-link {
-    align-items: center;
-    border: 3px solid var(--color-cream-background);
-    color: var(--color-cream-background);
-    display: flex;
-    font-family: "Syne", Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 800;
+    display: block;
     height: 48px;
-    justify-content: center;
     width: 48px;
   }
   
+  .menu-social-icon {
+    height: 60%;
+    object-fit: contain;
+    width: 60%;
+  }
+
+
   /* Hero */
   
   .hero-section {

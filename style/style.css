@@ -520,22 +520,38 @@
   .portfolio-projects-container {
     display: flex;
     flex-direction: column;
-    gap: 90px;
+    gap: 110px;
   }
   
   .portfolio-project-card {
     align-items: center;
     display: grid;
-    gap: 48px;
-    grid-template-columns: 180px minmax(420px, 720px);
+    gap: 72px;
+    grid-template-columns: 360px minmax(420px, 720px);
+    margin-bottom: 80px;
+  }
+
+  .portfolio-project-card:hover .portfolio-project-hover-info {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  
+  .portfolio-image-wrapper:hover .portfolio-project-image,
+  .portfolio-project-card:hover .portfolio-project-image {
+    filter: grayscale(0%);
+  }
+  
+  .portfolio-image-wrapper:hover::after,
+  .portfolio-project-card:hover .portfolio-image-wrapper::after {
+    opacity: 1;
   }
   
   .portfolio-project-card-right {
-    grid-template-columns: minmax(420px, 720px) 180px;
-    justify-content: end;
+    grid-template-columns: minmax(420px, 720px) 360px;
   }
   
-  .portfolio-project-card-right .portfolio-project-number {
+  .portfolio-project-card-right .portfolio-project-info-container {
     order: 2;
   }
   
@@ -543,52 +559,22 @@
     order: 1;
   }
   
+  .portfolio-project-info-container {
+    max-width: 360px;
+  }
+  
   .portfolio-project-number {
     font-family: "Syne", Arial, sans-serif;
     font-size: 34px;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0 92px;
   }
-  
-  .portfolio-image-wrapper {
-    aspect-ratio: 16 / 9;
-    border: 4px solid transparent;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-  
-  .portfolio-project-image {
-    filter: grayscale(100%);
-    height: 100%;
-    object-fit: cover;
-    transition: filter 220ms ease, transform 220ms ease;
-    width: 100%;
-  }
-  
-  .portfolio-project-overlay {
-    background-color: rgba(255, 252, 243, 0.92);
-    display: flex;
-    flex-direction: column;
-    inset: 0;
-    justify-content: center;
+
+  .portfolio-project-hover-info {
     opacity: 0;
-    padding: 42px;
-    position: absolute;
-    transition: opacity 220ms ease;
-  }
-  
-  .portfolio-image-wrapper:hover {
-    border-color: var(--color-black);
-  }
-  
-  .portfolio-image-wrapper:hover .portfolio-project-image {
-    filter: grayscale(0%);
-    transform: scale(1.02);
-  }
-  
-  .portfolio-image-wrapper:hover .portfolio-project-overlay {
-    opacity: 1;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: opacity 180ms ease, transform 180ms ease;
   }
   
   .portfolio-project-title {
@@ -601,15 +587,14 @@
   
   .portfolio-project-tech {
     color: var(--color-green);
-    font-size: 22px;
-    margin: 0 0 24px;
+    font-size: 24px;
+    margin: 0 0 28px;
   }
   
   .portfolio-project-description {
     font-size: 18px;
     line-height: 1.35;
-    margin: 0 0 32px;
-    max-width: 520px;
+    margin: 0 0 34px;
   }
   
   .portfolio-project-links {
@@ -629,19 +614,69 @@
     color: var(--color-cream-background);
   }
   
+  .portfolio-image-wrapper {
+    aspect-ratio: 16 / 9;
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  
+  .portfolio-image-wrapper::after {
+    border: 4px solid var(--color-black);
+    content: "";
+    height: 100%;
+    left: -22px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 22px;
+    transition: opacity 180ms ease;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .portfolio-project-image {
+    filter: grayscale(100%);
+    height: 100%;
+    object-fit: cover;
+    transition: filter 220ms ease;
+    width: 100%;
+  }
+  
+  .portfolio-image-wrapper:hover::after {
+    opacity: 1;
+  }
+  
+  .portfolio-image-wrapper:hover .portfolio-project-image {
+    filter: grayscale(0%);
+  }
+  
   @media (max-width: 900px) {
     .portfolio-project-card,
     .portfolio-project-card-right {
+      gap: 32px;
       grid-template-columns: 1fr;
     }
   
-    .portfolio-project-card-right .portfolio-project-number,
+    .portfolio-project-card-right .portfolio-project-info-container,
     .portfolio-project-card-right .portfolio-image-wrapper {
       order: initial;
     }
   
     .portfolio-project-number {
-      font-size: 28px;
+      margin-bottom: 28px;
+    }
+  
+    .portfolio-project-info-container {
+      max-width: 100%;
+    }
+  
+    .portfolio-project-title {
+      font-size: 38px;
+    }
+  
+    .portfolio-project-tech {
+      font-size: 20px;
     }
   }
   

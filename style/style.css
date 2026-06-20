@@ -404,7 +404,7 @@
   .skills-icons-container {
     display: grid;
     gap: 58px 72px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 56px;
   }
   
@@ -419,14 +419,34 @@
   .skill-icon {
     height: 74px;
     object-fit: contain;
+    transform-origin: center;
+    transition: transform 220ms ease;
     width: 74px;
   }
   
   .skill-name {
+    color: var(--color-black);
     font-size: 16px;
     font-weight: 800;
     line-height: 1.2;
     margin: 0;
+    transition: color 160ms ease;
+  }
+  
+  .single-skill-container:hover .skill-name {
+    color: var(--color-green);
+  }
+  
+  .single-skill-container:hover .skill-icon {
+    animation: skill-icon-small-circle 520ms ease-in-out;
+  }
+  
+  @keyframes skill-icon-small-circle {
+    0% {transform: translate(0, 0);}
+    25% {transform: translate(5px, -5px);}
+    50% {transform: translate(0, -9px);}
+    75% {transform: translate(-5px, -5px);}
+    100% {transform: translate(0, 0);}
   }
   
   .skills-contact-container {

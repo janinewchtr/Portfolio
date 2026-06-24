@@ -799,12 +799,25 @@
     min-height: 22px;
     text-align: center;
   }
-  
+
   .contact-submit-button:disabled {
     border-color: var(--color-cream-background);
     color: var(--color-cream-background);
     cursor: default;
     opacity: 0.45;
+  }
+  
+  .contact-scroll-top-link {
+    bottom: 100px;
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+  
+  .contact-scroll-top-icon {
+    height: 72px;
+    object-fit: contain;
+    width: 72px;
   }
   
   @media (max-width: 900px) {

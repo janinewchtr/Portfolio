@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("./send_mail.php", {
+      const response = await fetch("./send-mail.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

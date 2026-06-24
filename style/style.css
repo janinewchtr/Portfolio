@@ -48,7 +48,6 @@
     justify-content: space-between;
     left: 0;
     padding: 32px 8%;
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 20;
@@ -641,6 +640,7 @@
     object-fit: cover;
     transition: filter 220ms ease;
     width: 100%;
+    cursor: default;
   }
   
   .portfolio-image-wrapper:hover::after {
@@ -677,6 +677,208 @@
   
     .portfolio-project-tech {
       font-size: 20px;
+    }
+  }
+
+  .contact-section {
+    background-color: var(--color-black);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+    color: var(--color-cream-background);
+    margin-top: 120px;
+    min-height: 880px;
+    padding: 170px 8% 34px;
+    position: relative;
+  }
+  
+  .contact-arrow-top {
+    height: 150px;
+    object-fit: contain;
+    position: absolute;
+    right: 10%;
+    top: -130px;
+    width: 150px;
+  }
+  
+  .contact-content-container {
+    min-height: 690px;
+    position: relative;
+  }
+  
+  .contact-main-title {
+    font-family: "Syne", Arial, sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+  }
+  
+  .contact-form-container {
+    margin: 32px auto 0;
+    max-width: 620px;
+  }
+  
+  .contact-question-title {
+    color: var(--color-green);
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0 0 22px;
+    text-align: center;
+  }
+  
+  .contact-intro-text {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 0 34px;
+    text-align: center;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .contact-label {
+    font-size: 15px;
+    margin-left: 24px;
+  }
+  
+  .contact-input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--color-cream-background);
+    color: var(--color-cream-background);
+    font-family: "Overpass", Arial, sans-serif;
+    font-size: 18px;
+    min-height: 38px;
+    outline: none;
+    padding: 4px 24px;
+  }
+  
+  .contact-textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .contact-privacy-container {
+    align-items: flex-start;
+    display: flex;
+    font-size: 14px;
+    gap: 8px;
+    line-height: 1.4;
+    margin-top: 6px;
+  }
+  
+  .contact-checkbox {
+    accent-color: var(--color-green);
+    margin-top: 2px;
+  }
+  
+  .contact-privacy-link {
+    color: var(--color-green);
+  }
+  
+  .contact-submit-button {
+    align-self: center;
+    background-color: transparent;
+    border: 3px solid var(--color-gray);
+    color: var(--color-gray);
+    cursor: pointer;
+    font-family: "Overpass", Arial, sans-serif;
+    font-size: 22px;
+    margin-top: 28px;
+    padding: 18px 54px;
+  }
+  
+  .contact-submit-button:hover {
+    border-color: var(--color-cream-background);
+    color: var(--color-cream-background);
+  }
+  
+  .contact-scroll-top-link {
+    bottom: 100px;
+    color: var(--color-cream-background);
+    font-size: 72px;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+  }
+  
+  .contact-footer-container {
+    align-items: flex-end;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .contact-logo-link {
+    display: inline-block;
+    font-family: "Syne", Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .contact-copyright-text {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .contact-footer-right {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .contact-social-links-container {
+    display: flex;
+    gap: 28px;
+  }
+  
+  .contact-social-link {
+    display: block;
+    height: 32px;
+    width: 32px;
+  }
+  
+  .contact-social-icon {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  .contact-legal-link {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 900px) {
+    .contact-section {
+      padding: 140px 20px 34px;
+    }
+  
+    .contact-main-title {
+      font-size: 58px;
+    }
+  
+    .contact-form-container {
+      max-width: 100%;
+    }
+  
+    .contact-footer-container {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 34px;
+      position: static;
+      margin-top: 80px;
+    }
+  
+    .contact-scroll-top-link {
+      bottom: 120px;
+      right: 20px;
     }
   }
   

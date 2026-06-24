@@ -650,6 +650,141 @@
   .portfolio-image-wrapper:hover .portfolio-project-image {
     filter: grayscale(0%);
   }
+
+  .legal-header-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 8%;
+  }
+  
+  .legal-notice-page {
+    background-color: var(--color-cream-background);
+    min-height: 100vh;
+    padding: 40px 8% 120px;
+  }
+  
+  .legal-notice-content {
+    margin: 0 auto;
+    max-width: 1060px;
+  }
+  
+  .legal-notice-main-title {
+    font-family: "Syne", Arial, sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 40px 0 72px;
+  }
+  
+  .legal-notice-text-block {
+    max-width: 980px;
+  }
+  
+  .legal-notice-section-title {
+    color: var(--color-green);
+    font-family: "Overpass", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 34px 0 8px;
+  }
+  
+  .legal-notice-text {
+    font-size: 18px;
+    line-height: 1.45;
+    margin: 0 0 22px;
+  }
+  
+  .legal-notice-text a {
+    color: var(--color-green);
+  }
+  
+  .legal-footer-section {
+    align-items: flex-end;
+    background-color: var(--color-black);
+    clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 100%);
+    color: var(--color-cream-background);
+    display: flex;
+    justify-content: space-between;
+    min-height: 210px;
+    padding: 78px 8% 34px;
+  }
+  
+  .legal-footer-logo {
+    display: inline-block;
+    font-family: "Syne", Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  
+  .legal-footer-copyright {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .legal-footer-right {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .legal-footer-social-container {
+    display: flex;
+    gap: 34px;
+  }
+  
+  .legal-footer-social-link {
+    display: block;
+    height: 34px;
+    width: 34px;
+  }
+  
+  .legal-footer-social-icon {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+  
+  .legal-footer-link {
+    font-size: 15px;
+  }
+  
+  @media (max-width: 800px) {
+    .legal-header-container {
+      padding: 28px 20px;
+    }
+  
+    .legal-notice-page {
+      padding: 20px 20px 80px;
+    }
+  
+    .legal-notice-main-title {
+      font-size: 26px;
+      margin: 40px 0 48px;
+    }
+  
+    .legal-notice-section-title {
+      font-size: 20px;
+    }
+  
+    .legal-notice-text {
+      font-size: 16px;
+    }
+  
+    .legal-footer-section {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 34px;
+      padding: 70px 20px 32px;
+    }
+  
+    .legal-footer-right {
+      align-items: flex-start;
+    }
+  }
   
   @media (max-width: 900px) {
     .portfolio-project-card,

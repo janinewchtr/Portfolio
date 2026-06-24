@@ -5,179 +5,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Datenschutzerklärung von Janine Wächter." />
     <title>Datenschutzerklärung | Janine Wächter</title>
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/style.css"/>
+    <script src="./script.js"></script>
   </head>
 
   <body>
     <header class="legal-header-container">
       <a class="logo-link" href="./index.html#home">[JW]</a>
-      <a class="legal-back-link" href="./index.html#contact">Zurück</a>
+
+      <button class="burger-menu-button" type="button" onclick="openMenu()">
+        <img
+          class="burger-menu-icon"
+          src="./assets/img/12. burger menu S3.png"
+          alt="Menü öffnen"
+        />
+      </button>
     </header>
 
-    <main class="privacy-page" id="privacy-page">
-      <h1 class="privacy-main-title">Datenschutzerklärung</h1>
+    <div class="menu-overlay" id="menuOverlay">
+      <div class="menu-top-container">
+        <a class="logo-link" href="./index.html#home" onclick="closeMenu()">[JW]</a>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">1. Einleitung</h2>
+        <div class="menu-top-right-container">
+          <div class="language-switch-container">
+            <button class="language-option active-language" type="button">EN</button>
+            <button class="language-option" type="button">DE</button>
+          </div>
 
-        <p class="privacy-text">
-          Der Schutz Ihrer persönlichen Daten hat höchste Priorität. Diese Datenschutzerklärung
-          erläutert die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten
-          im Zusammenhang mit diesem Onlineangebot.
-        </p>
+          <button class="close-menu-button" type="button" onclick="closeMenu()">×</button>
+        </div>
+      </div>
 
-        <h3 class="privacy-subtitle">Allgemeine Hinweise</h3>
-        <p class="privacy-text">
-          Diese Datenschutzerklärung gibt Ihnen einen Überblick darüber, was mit Ihren
-          personenbezogenen Daten geschieht, wenn Sie diese Website besuchen.
-        </p>
+      <nav class="menu-links-container">
+        <a class="menu-big-link" href="./index.html#about-me" onclick="closeMenu()">About me</a>
+        <a class="menu-big-link" href="./index.html#skills" onclick="closeMenu()">My skills</a>
+        <a class="menu-big-link" href="./index.html#portfolio" onclick="closeMenu()">Portfolio</a>
+      </nav>
 
-        <h3 class="privacy-subtitle">Verantwortliche Stelle</h3>
-        <p class="privacy-text">
-          Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die
-          Kontaktdaten des Verantwortlichen finden Sie im Abschnitt „Verantwortlicher“.
-        </p>
-      </section>
-
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">2. Verantwortlicher</h2>
-
-        <p class="privacy-text">
-          Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der DSGVO ist:
-        </p>
-
-        <p class="privacy-contact-line">Janine Wächter</p>
-        <p class="privacy-contact-line">Adresse: Hornsche Straße 227, 32760 Detmold</p>
-        <p class="privacy-contact-line">
-          Website:
-          <a href="https://www.janine-waechter.de">www.janine-waechter.de</a>
-        </p>
-        <p class="privacy-contact-line">
-          E-Mail:
-          <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>
-        </p>
-      </section>
-
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">3. Auftragsverarbeiter</h2>
-
-        <p class="privacy-text">
-          Die Zusammenarbeit erfolgt mit verschiedenen Auftragsverarbeitern, die im Auftrag Daten
-          verarbeiten. Diese Dienstleister sind vertraglich verpflichtet, die Daten vertraulich zu
-          behandeln und ausschließlich im Rahmen der jeweiligen Dienstleistung zu nutzen.
-        </p>
-      </section>
-
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">4. Begriffsbestimmungen</h2>
-
-        <p class="privacy-text">
-          Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder
-          identifizierbare natürliche Person beziehen.
-        </p>
-
-        <p class="privacy-text">
-          Verarbeitung umfasst jede Handlung im Zusammenhang mit personenbezogenen Daten, zum
-          Beispiel das Erheben, Speichern, Verwenden, Übermitteln, Löschen oder Vernichten von Daten.
-        </p>
-
-        <p class="privacy-text">
-          Verantwortlicher ist die natürliche oder juristische Person, die über die Zwecke und Mittel
-          der Verarbeitung personenbezogener Daten entscheidet.
-        </p>
-      </section>
-
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">5. Hosting</h2>
-
-        <p class="privacy-text">
-          Diese Website wird auf den Servern eines externen Dienstleisters gehostet, um eine
-          zuverlässige und sichere Nutzung dieses Onlineangebots zu gewährleisten.
-        </p>
-
-        <p class="privacy-contact-line">All-Inkl.com</p>
-        <p class="privacy-contact-line">Hauptstraße 68, 02742 Friedersdorf, Deutschland</p>
-
-        <p class="privacy-text">
-          Weitere Informationen:
-          <a href="https://all-inkl.com/datenschutzinformationen/" target="_blank" rel="noreferrer">
-            https://all-inkl.com/datenschutzinformationen/
+      <div class="menu-black-bottom-section">
+        <div class="menu-contact-container">
+          <h2 class="menu-contact-title">Say Hi!</h2>
+          <a class="menu-email-link" href="mailto:janinewaechter95@gmail.com">
+            janinewaechter95@gmail.com
           </a>
-        </p>
-      </section>
+        </div>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">6. Rechtliche Grundlagen der Datenverarbeitung</h2>
+        <div class="menu-social-links-container">
+          <a class="menu-social-link" href="#" aria-label="GitHub">
+            <img class="menu-social-icon" src="./assets/img/github.png" alt="" />
+          </a>
 
-        <p class="privacy-text">
-          Die Verarbeitung personenbezogener Daten erfolgt auf Grundlage der DSGVO. Je nach Zweck
-          kommen insbesondere Art. 6 Abs. 1 lit. a DSGVO, Art. 6 Abs. 1 lit. b DSGVO,
-          Art. 6 Abs. 1 lit. c DSGVO oder Art. 6 Abs. 1 lit. f DSGVO zur Anwendung.
-        </p>
-      </section>
+          <a
+            class="menu-social-link"
+            href="mailto:janinewaechter95@gmail.com"
+            aria-label="E-Mail"
+          >
+            <img class="menu-social-icon" src="./assets/img/5. Email button s3.png" alt="" />
+          </a>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">7. Speicherdauer</h2>
+          <a class="menu-social-link" href="#" aria-label="LinkedIn">
+            <img class="menu-social-icon" src="./assets/img/6. Linkedin button s3.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
 
-        <p class="privacy-text">
-          Personenbezogene Daten verbleiben beim Verantwortlichen, bis der Zweck der
-          Datenverarbeitung entfällt oder eine Einwilligung widerrufen wird, sofern keine
-          gesetzlichen Aufbewahrungspflichten entgegenstehen.
-        </p>
-      </section>
+    <main class="legal-notice-page" id="privacy-page">
+      <section class="legal-notice-content">
+        <h1 class="legal-notice-main-title">Datenschutzerklärung</h1>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">8. Sicherheitsmaßnahmen und Datenminimierung</h2>
+        <div class="legal-notice-text-block">
+          <h2 class="legal-notice-section-title">1. Einleitung</h2>
 
-        <p class="privacy-text">
-          Es werden technische und organisatorische Maßnahmen ergriffen, um personenbezogene Daten
-          vor Verlust, Veränderung, unbefugtem Zugriff oder unbefugter Offenlegung zu schützen.
-        </p>
-      </section>
+          <p class="legal-notice-text">
+            Der Schutz Ihrer persönlichen Daten hat höchste Priorität. Diese Datenschutzerklärung
+            erläutert die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten im
+            Zusammenhang mit diesem Onlineangebot.
+          </p>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">9. SSL/TLS-Verschlüsselung</h2>
+          <h2 class="legal-notice-section-title">Allgemeine Hinweise</h2>
 
-        <p class="privacy-text">
-          Diese Website nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine
-          verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers mit
-          „https://“ beginnt.
-        </p>
-      </section>
+          <p class="legal-notice-text">
+            Diese Datenschutzerklärung gibt Ihnen einen Überblick darüber, was mit Ihren
+            personenbezogenen Daten geschieht, wenn Sie diese Website besuchen.
+          </p>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">10. Kontaktformular</h2>
+          <h2 class="legal-notice-section-title">Verantwortliche Stelle</h2>
 
-        <p class="privacy-text">
-          Wenn Sie das Kontaktformular nutzen, werden die dort eingegebenen Daten zur Bearbeitung
-          Ihrer Anfrage verarbeitet. Die Verarbeitung erfolgt auf Grundlage Ihrer freiwillig
-          erteilten Einwilligung.
-        </p>
+          <p class="legal-notice-text">
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Die
+            Kontaktdaten des Verantwortlichen finden Sie im Abschnitt „Verantwortlicher“.
+          </p>
 
-        <p class="privacy-text">
-          Die für die Benutzung des Kontaktformulars erhobenen personenbezogenen Daten werden nach
-          Erledigung der Anfrage regelmäßig gelöscht.
-        </p>
-      </section>
+          <h2 class="legal-notice-section-title">2. Verantwortlicher</h2>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">11. Anfragen per E-Mail oder Telefon</h2>
+          <p class="legal-notice-text">
+            Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der DSGVO ist:
+          </p>
 
-        <p class="privacy-text">
-          Wenn Sie per E-Mail oder Telefon Kontakt aufnehmen, werden die übermittelten Daten zur
-          Bearbeitung Ihrer Anfrage verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
-          oder Art. 6 Abs. 1 lit. f DSGVO.
-        </p>
-      </section>
+          <p class="legal-notice-text">
+            Janine Wächter<br />
+            Hornsche Straße 227<br />
+            32760 Detmold
+          </p>
 
-      <section class="privacy-section-block">
-        <h2 class="privacy-section-title">12. Lokale Schriftarten</h2>
+          <p class="legal-notice-text">
+            Website:
+            <a href="https://www.janine-waechter.de">www.janine-waechter.de</a><br />
+            E-Mail:
+            <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a><br />
+            Telefon: ____________
+          </p>
 
-        <p class="privacy-text">
-          Auf dieser Website werden Schriftarten lokal eingebunden. Beim Laden der Schriftarten
-          findet keine Verbindung zu externen Schriftanbieter-Servern statt.
-        </p>
+          <h2 class="legal-notice-section-title">3. Auftragsverarbeiter</h2>
+
+          <p class="legal-notice-text">
+            Die Zusammenarbeit erfolgt mit verschiedenen Auftragsverarbeitern, die im Auftrag Daten
+            verarbeiten. Diese Dienstleister sind vertraglich verpflichtet, die Daten vertraulich zu
+            behandeln und ausschließlich im Rahmen der jeweiligen Dienstleistung zu nutzen.
+          </p>
+
+          <h2 class="legal-notice-section-title">4. Begriffsbestimmungen</h2>
+
+          <p class="legal-notice-text">
+            Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder
+            identifizierbare natürliche Person beziehen.
+          </p>
+
+          <p class="legal-notice-text">
+            Verarbeitung umfasst jede Handlung im Zusammenhang mit personenbezogenen Daten, zum
+            Beispiel das Erheben, Speichern, Verwenden, Übermitteln, Löschen oder Vernichten von
+            Daten.
+          </p>
+
+          <p class="legal-notice-text">
+            Verantwortlicher ist die natürliche oder juristische Person, die über die Zwecke und
+            Mittel der Verarbeitung personenbezogener Daten entscheidet.
+          </p>
+
+          <h2 class="legal-notice-section-title">5. Hosting</h2>
+
+          <p class="legal-notice-text">
+            Diese Website wird auf den Servern eines externen Dienstleisters gehostet, um eine
+            zuverlässige und sichere Nutzung dieses Onlineangebots zu gewährleisten.
+          </p>
+
+          <p class="legal-notice-text">
+            All-Inkl.com<br />
+            Hauptstraße 68<br />
+            02742 Friedersdorf<br />
+            Deutschland
+          </p>
+
+          <p class="legal-notice-text">
+            Weitere Informationen:
+            <a
+              href="https://all-inkl.com/datenschutzinformationen/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://all-inkl.com/datenschutzinformationen/
+            </a>
+          </p>
+
+          <h2 class="legal-notice-section-title">6. Rechtliche Grundlagen der Datenverarbeitung</h2>
+
+          <p class="legal-notice-text">
+            Die Verarbeitung personenbezogener Daten erfolgt auf Grundlage der DSGVO. Je nach Zweck
+            kommen insbesondere Art. 6 Abs. 1 lit. a DSGVO, Art. 6 Abs. 1 lit. b DSGVO,
+            Art. 6 Abs. 1 lit. c DSGVO oder Art. 6 Abs. 1 lit. f DSGVO zur Anwendung.
+          </p>
+
+          <h2 class="legal-notice-section-title">7. Speicherdauer</h2>
+
+          <p class="legal-notice-text">
+            Personenbezogene Daten verbleiben beim Verantwortlichen, bis der Zweck der
+            Datenverarbeitung entfällt oder eine Einwilligung widerrufen wird, sofern keine
+            gesetzlichen Aufbewahrungspflichten entgegenstehen.
+          </p>
+
+          <h2 class="legal-notice-section-title">8. Sicherheitsmaßnahmen und Datenminimierung</h2>
+
+          <p class="legal-notice-text">
+            Es werden technische und organisatorische Maßnahmen ergriffen, um personenbezogene Daten
+            vor Verlust, Veränderung, unbefugtem Zugriff oder unbefugter Offenlegung zu schützen.
+          </p>
+
+          <h2 class="legal-notice-section-title">9. SSL/TLS-Verschlüsselung</h2>
+
+          <p class="legal-notice-text">
+            Diese Website nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Eine
+            verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers mit
+            „https://“ beginnt.
+          </p>
+
+          <h2 class="legal-notice-section-title">10. Kontaktformular</h2>
+
+          <p class="legal-notice-text">
+            Wenn Sie das Kontaktformular nutzen, werden die dort eingegebenen Daten zur Bearbeitung
+            Ihrer Anfrage verarbeitet. Die Verarbeitung erfolgt auf Grundlage Ihrer freiwillig
+            erteilten Einwilligung.
+          </p>
+
+          <p class="legal-notice-text">
+            Die für die Benutzung des Kontaktformulars erhobenen personenbezogenen Daten werden nach
+            Erledigung der Anfrage regelmäßig gelöscht.
+          </p>
+
+          <h2 class="legal-notice-section-title">11. Anfragen per E-Mail oder Telefon</h2>
+
+          <p class="legal-notice-text">
+            Wenn Sie per E-Mail oder Telefon Kontakt aufnehmen, werden die übermittelten Daten zur
+            Bearbeitung Ihrer Anfrage verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
+            oder Art. 6 Abs. 1 lit. f DSGVO.
+          </p>
+
+          <h2 class="legal-notice-section-title">12. Lokale Schriftarten</h2>
+
+          <p class="legal-notice-text">
+            Auf dieser Website werden Schriftarten lokal eingebunden. Beim Laden der Schriftarten
+            findet keine Verbindung zu externen Schriftanbieter-Servern statt.
+          </p>
+        </div>
       </section>
     </main>
+
+    <footer class="legal-footer-section">
+      <div class="legal-footer-left">
+        <a class="legal-footer-logo" href="./index.html#home">[JW]</a>
+        <p class="legal-footer-copyright">© Janine Wächter 2026</p>
+      </div>
+
+      <div class="legal-footer-right">
+        <div class="legal-footer-social-container">
+          <a class="legal-footer-social-link" href="#" aria-label="GitHub">
+            <img class="legal-footer-social-icon" src="./assets/img/github.png" alt="" />
+          </a>
+
+          <a
+            class="legal-footer-social-link"
+            href="mailto:janinewaechter95@gmail.com"
+            aria-label="E-Mail"
+          >
+            <img
+              class="legal-footer-social-icon"
+              src="./assets/img/5. Email button s3.png"
+              alt=""
+            />
+          </a>
+
+          <a class="legal-footer-social-link" href="#" aria-label="LinkedIn">
+            <img
+              class="legal-footer-social-icon"
+              src="./assets/img/6. Linkedin button s3.png"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <a class="legal-footer-link" href="./impressum.html">Impressum</a>
+      </div>
+    </footer>
   </body>
 </html>

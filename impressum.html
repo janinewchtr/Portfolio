@@ -6,101 +6,194 @@
     <meta name="description" content="Impressum von Janine Wächter." />
     <title>Impressum | Janine Wächter</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <script src="./script.js"></script>
   </head>
 
   <body>
     <header class="legal-header-container">
       <a class="logo-link" href="./index.html#home">[JW]</a>
-      <a class="legal-back-link" href="./index.html#contact">Zurück</a>
+
+      <button class="burger-menu-button" type="button" onclick="openMenu()">
+        <img
+          class="burger-menu-icon"
+          src="./assets/img/12. burger menu S3.png"
+          alt="Menü öffnen"
+        />
+      </button>
     </header>
 
-    <main class="legal-page" id="legal-page">
-      <h1 class="legal-main-title">Impressum</h1>
+    <div class="menu-overlay" id="menuOverlay">
+      <div class="menu-top-container">
+        <a class="logo-link" href="./index.html#home" onclick="closeMenu()">[JW]</a>
 
-      <section class="legal-section-block">
-        <h2 class="legal-section-title">Angaben gemäß § 5 DDG</h2>
+        <div class="menu-top-right-container">
+          <div class="language-switch-container">
+            <button class="language-option active-language" type="button">EN</button>
+            <button class="language-option" type="button">DE</button>
+          </div>
 
-        <p class="legal-text">
-          Janine Wächter<br />
-          Hornsche Straße 227<br />
-          32760 Detmold
-        </p>
-      </section>
+          <button class="close-menu-button" type="button" onclick="closeMenu()">×</button>
+        </div>
+      </div>
 
-      <section class="legal-section-block">
-        <h2 class="legal-section-title">Vertreten durch</h2>
+      <nav class="menu-links-container">
+        <a class="menu-big-link" href="./index.html#about-me" onclick="closeMenu()">About me</a>
+        <a class="menu-big-link" href="./index.html#skills" onclick="closeMenu()">My skills</a>
+        <a class="menu-big-link" href="./index.html#portfolio" onclick="closeMenu()">Portfolio</a>
+      </nav>
 
-        <p class="legal-text">Janine Wächter</p>
-      </section>
-
-      <section class="legal-section-block">
-        <h2 class="legal-section-title">Kontakt</h2>
-
-        <p class="legal-text">
-          Telefon:
-          <a href="tel:+4915153527322">+49 151 53527322</a><br />
-          E-Mail:
-          <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>
-        </p>
-      </section>
-
-      <section class="legal-section-block">
-        <h2 class="legal-section-title">
-          Verbraucherstreitbeilegung / Universalschlichtungsstelle
-        </h2>
-
-        <p class="legal-text">
-          Wir nehmen nicht an Streitbeilegungsverfahren vor einer
-          Verbraucherschlichtungsstelle teil und sind dazu auch nicht verpflichtet.
-        </p>
-      </section>
-
-      <section class="legal-section-block">
-        <h2 class="legal-section-title">Datenschutzerklärung</h2>
-
-        <p class="legal-text">
-          Unter dem folgenden Link finden Sie unsere
-          <a href="./datenschutz.html">Datenschutzerklärung</a>.
-        </p>
-      </section>
-
-      <section class="legal-section-block">
-        <h2 class="legal-section-title">Quelle</h2>
-
-        <p class="legal-text">
-          Impressum von
-          <a href="https://websitewissen.com" target="_blank" rel="dofollow noreferrer">
-            WebsiteWissen.com
-          </a>,
-          dem Ratgeber für
-          <a
-            href="https://websitewissen.com/wordpress-website-erstellen"
-            target="_blank"
-            rel="dofollow noreferrer"
-          >
-            WordPress-Websites
-          </a>,
-          <a
-            href="https://websitewissen.com/wordpress-hosting-vergleich"
-            target="_blank"
-            rel="dofollow noreferrer"
-          >
-            WordPress-Hosting
+      <div class="menu-black-bottom-section">
+        <div class="menu-contact-container">
+          <h2 class="menu-contact-title">Say Hi!</h2>
+          <a class="menu-email-link" href="mailto:janinewaechter95@gmail.com">
+            janinewaechter95@gmail.com
           </a>
-          und
-          <a
-            href="https://websitewissen.com/website-kosten"
-            target="_blank"
-            rel="dofollow noreferrer"
-          >
-            Website-Kosten
+        </div>
+
+        <div class="menu-social-links-container">
+          <a class="menu-social-link" href="#" aria-label="GitHub">
+            <img class="menu-social-icon" src="./assets/img/github.png" alt="" />
           </a>
-          nach einem Muster von
-          <a href="https://www.kanzlei-hasselbach.de/" target="_blank" rel="dofollow noreferrer">
-            Kanzlei Hasselbach Rechtsanwälte
-          </a>.
-        </p>
+
+          <a
+            class="menu-social-link"
+            href="mailto:janinewaechter95@gmail.com"
+            aria-label="E-Mail"
+          >
+            <img class="menu-social-icon" src="./assets/img/5. Email button s3.png" alt="" />
+          </a>
+
+          <a class="menu-social-link" href="#" aria-label="LinkedIn">
+            <img class="menu-social-icon" src="./assets/img/6. Linkedin button s3.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main class="legal-notice-page" id="legal-notice-page">
+      <section class="legal-notice-content">
+        <h1 class="legal-notice-main-title">Impressum</h1>
+
+        <div class="legal-notice-text-block">
+          <h2 class="legal-notice-section-title">Impressum</h2>
+
+          <ul class="legal-notice-list">
+            <li>Janine Wächter</li>
+            <li>Hornsche Straße 227</li>
+            <li>32760 Detmold</li>
+          </ul>
+
+          <h2 class="legal-notice-section-title">Kontakt</h2>
+
+          <p class="legal-notice-text">
+            E-Mail:
+            <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>
+          </p>
+
+          <h2 class="legal-notice-section-title">Annahme der Bedingungen</h2>
+
+          <p class="legal-notice-text">
+            Durch den Zugriff auf dieses Portfolio erkennen Sie die folgenden Bedingungen und
+            Hinweise an und erklären sich damit einverstanden. Diese Bedingungen können von Zeit zu
+            Zeit aktualisiert oder geändert werden, ohne dass eine gesonderte Mitteilung erfolgt.
+          </p>
+
+          <h2 class="legal-notice-section-title">Umfang und Eigentum des Produkts</h2>
+
+          <p class="legal-notice-text">
+            Dieses Portfolio wurde als persönliches Webentwicklungsprojekt erstellt. Es dient der
+            Präsentation meiner Fähigkeiten, Projekte und Erfahrungen im Bereich Frontend
+            Development. Die Inhalte haben einen informativen Zweck und stellen kein kommerzielles
+            Produktangebot dar.
+          </p>
+
+          <p class="legal-notice-text">
+            Das Design und die Umsetzung dieses Portfolios wurden im Rahmen meiner Ausbildung und
+            persönlichen Weiterentwicklung erstellt. Eine unerlaubte Nutzung, Vervielfältigung,
+            Veränderung, Verbreitung oder Nachbildung des Designs ist nicht gestattet.
+          </p>
+
+          <h2 class="legal-notice-section-title">Eigentumsrechte</h2>
+
+          <p class="legal-notice-text">
+            Alle Inhalte dieses Portfolios, einschließlich Texte, Bilder, Grafiken, Layouts,
+            Quellcode und sonstiger Bestandteile, unterliegen, soweit nicht anders gekennzeichnet,
+            meinen Rechten oder den Rechten der jeweils genannten Urheberinnen und Urheber.
+          </p>
+
+          <h2 class="legal-notice-section-title">Nutzung des Portfolios</h2>
+
+          <p class="legal-notice-text">
+            Dieses Portfolio darf ausschließlich zu rechtmäßigen Zwecken genutzt werden. Jede
+            Nutzung, die gegen geltendes Recht verstößt oder Rechte Dritter verletzt, ist untersagt.
+            Sie sind selbst verantwortlich für die Art und Weise, wie Sie mit den Inhalten dieser
+            Website interagieren.
+          </p>
+
+          <h2 class="legal-notice-section-title">
+            Haftungsausschluss und Haftungsbeschränkung
+          </h2>
+
+          <p class="legal-notice-text">
+            Die Inhalte dieses Portfolios werden mit größtmöglicher Sorgfalt erstellt. Dennoch kann
+            keine Gewähr für Vollständigkeit, Richtigkeit, Aktualität oder Verfügbarkeit der Inhalte
+            übernommen werden. Eine Haftung für direkte oder indirekte Schäden, die aus der Nutzung
+            dieser Website entstehen, ist ausgeschlossen, soweit gesetzlich zulässig.
+          </p>
+
+          <h2 class="legal-notice-section-title">Freistellung</h2>
+
+          <p class="legal-notice-text">
+            Sie erklären sich damit einverstanden, mich von Ansprüchen, Schäden, Verlusten oder
+            Kosten freizustellen, die aus einer rechtswidrigen Nutzung dieses Portfolios oder aus
+            einem Verstoß gegen diese Hinweise entstehen.
+          </p>
+
+          <p class="legal-notice-text">
+            Bei Fragen oder Hinweisen kontaktieren Sie mich bitte unter:
+            <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>.
+          </p>
+
+          <p class="legal-notice-text">Datum: 24. Juni 2026</p>
+        </div>
       </section>
     </main>
+
+    <footer class="legal-footer-section">
+      <div class="legal-footer-left">
+        <a class="legal-footer-logo" href="./index.html#home">[JW]</a>
+        <p class="legal-footer-copyright">© Janine Wächter 2026</p>
+      </div>
+
+      <div class="legal-footer-right">
+        <div class="legal-footer-social-container">
+          <a class="legal-footer-social-link" href="#" aria-label="GitHub">
+            <img class="legal-footer-social-icon" src="./assets/img/github.png" alt="" />
+          </a>
+
+          <a
+            class="legal-footer-social-link"
+            href="mailto:janinewaechter95@gmail.com"
+            aria-label="E-Mail"
+          >
+            <img
+              class="legal-footer-social-icon"
+              src="./assets/img/5. Email button s3.png"
+              alt=""
+            />
+          </a>
+
+          <a class="legal-footer-social-link" href="#" aria-label="LinkedIn">
+            <img
+              class="legal-footer-social-icon"
+              src="./assets/img/6. Linkedin button s3.png"
+              alt=""
+            />
+          </a>
+        </div>
+
+        <a class="legal-footer-link" href="./impressum.html">Impressum</a>
+      </div>
+    </footer>
   </body>
 </html>

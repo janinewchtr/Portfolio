@@ -801,8 +801,10 @@
   }
   
   .contact-submit-button:disabled {
+    border-color: var(--color-cream-background);
+    color: var(--color-cream-background);
     cursor: default;
-    opacity: 0.4;
+    opacity: 0.45;
   }
   
   @media (max-width: 900px) {
@@ -935,19 +937,20 @@
   .contact-submit-button {
     align-self: center;
     background-color: transparent;
-    border: 3px solid var(--color-gray);
-    color: var(--color-gray);
+    border: 3px solid var(--color-cream-background);
+    color: var(--color-cream-background);
     cursor: pointer;
     font-family: "Overpass", Arial, sans-serif;
     font-size: 22px;
     margin-top: 28px;
     padding: 18px 54px;
+    transition: background-color 160ms ease, color 160ms ease, opacity 160ms ease;
   }
-  
-  .contact-submit-button:hover {
-    border-color: var(--color-cream-background);
-    color: var(--color-cream-background);
-  }
+
+.contact-submit-button:not(:disabled):hover {
+  background-color: var(--color-cream-background);
+  color: var(--color-black);
+}
   
   .contact-scroll-top-link {
     bottom: 100px;

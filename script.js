@@ -8,23 +8,29 @@ function openMenu() {
     document.body.style.overflow = "";
   }
 
-const contactForm = document.getElementById("contactForm");
-const contactSubmitButton = document.getElementById("contactSubmitButton");
-const contactStatusText = document.getElementById("contactStatusText");
-
-const contactNameInput = document.getElementById("contact-name");
-const contactEmailInput = document.getElementById("contact-email");
-const contactMessageInput = document.getElementById("contact-message");
-const contactPrivacyCheckbox = document.getElementById("contact-privacy");
-
-const nameError = document.getElementById("nameError");
-const emailError = document.getElementById("emailError");
-const privacyError = document.getElementById("privacyError");
-
-function isContactNameValid() {
-  return contactNameInput.value.trim().length >= 2;
-}
-
+  const contactForm = document.getElementById("contactForm");
+  const contactSubmitButton = document.getElementById("contactSubmitButton");
+  
+  const contactNameInput = document.getElementById("contact-name");
+  const contactEmailInput = document.getElementById("contact-email");
+  const contactPrivacyCheckbox = document.getElementById("contact-privacy");
+  
+  function checkIfContactFormIsValid() {
+    const nameIsValid = contactNameInput.value.trim().length > 0;
+    const emailIsValid = contactEmailInput.value.trim().length > 0;
+    const privacyIsChecked = contactPrivacyCheckbox.checked;
+  
+    contactSubmitButton.disabled = !(nameIsValid && emailIsValid && privacyIsChecked);
+  }
+  
+  if (contactForm) {
+    contactNameInput.addEventListener("input", checkIfContactFormIsValid);
+    contactEmailInput.addEventListener("input", checkIfContactFormIsValid);
+    contactPrivacyCheckbox.addEventListener("change", checkIfContactFormIsValid);
+  
+    checkIfContactFormIsValid();
+  }
+  
 function isContactEmailValid() {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmailInput.value.trim());
 }

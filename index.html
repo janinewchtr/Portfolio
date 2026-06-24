@@ -292,47 +292,57 @@
             Sag Hallo! Lass uns über deine Ideen sprechen und sie gemeinsam umsetzen.
           </p>
     
-          <form class="contact-form" action="#" method="post">
-            <label class="contact-label" for="contact-name">Dein Name</label>
+          <form class="contact-form" id="contactForm">
+            <label class="contact-label" for="contact-name">Dein Name *</label>
             <input
               class="contact-input"
               id="contact-name"
-              name="contact-name"
+              name="name"
               type="text"
+              autocomplete="name"
+              required
             />
-    
-            <label class="contact-label" for="contact-email">Deine E-Mail</label>
+            <p class="contact-error-text" id="nameError"></p>
+          
+            <label class="contact-label" for="contact-email">Deine E-Mail *</label>
             <input
               class="contact-input"
               id="contact-email"
-              name="contact-email"
+              name="email"
               type="email"
+              autocomplete="email"
+              required
             />
-    
+            <p class="contact-error-text" id="emailError"></p>
+          
             <label class="contact-label" for="contact-message">Deine Nachricht</label>
             <textarea
               class="contact-input contact-textarea"
               id="contact-message"
-              name="contact-message"
+              name="message"
             ></textarea>
-    
+          
             <label class="contact-privacy-container" for="contact-privacy">
               <input
                 class="contact-checkbox"
                 id="contact-privacy"
-                name="contact-privacy"
+                name="privacy"
                 type="checkbox"
+                required
               />
               <span>
                 Ich habe die
                 <a class="contact-privacy-link" href="./datenschutz.html">Datenschutzerklärung</a>
-                gelesen und stimme der Verarbeitung meiner Daten zu.
+                gelesen und stimme der Verarbeitung meiner Daten zu. *
               </span>
             </label>
-    
-            <button class="contact-submit-button" type="submit">
+            <p class="contact-error-text" id="privacyError"></p>
+          
+            <button class="contact-submit-button" id="contactSubmitButton" type="submit" disabled>
               Nachricht senden
             </button>
+          
+            <p class="contact-status-text" id="contactStatusText"></p>
           </form>
         </div>
     

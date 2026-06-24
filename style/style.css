@@ -785,6 +785,25 @@
       align-items: flex-start;
     }
   }
+
+  .contact-error-text {
+    color: #ff6b6b;
+    font-size: 14px;
+    min-height: 18px;
+    margin: 0 0 4px;
+  }
+  
+  .contact-status-text {
+    color: var(--color-green);
+    font-size: 16px;
+    min-height: 22px;
+    text-align: center;
+  }
+  
+  .contact-submit-button:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
   
   @media (max-width: 900px) {
     .portfolio-project-card,

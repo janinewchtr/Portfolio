@@ -1,79 +1,69 @@
 function openMenu() {
-    document.getElementById("menuOverlay").classList.add("menu-is-open");
-    document.body.style.overflow = "hidden";
-  }
-  
-  function closeMenu() {
-    document.getElementById("menuOverlay").classList.remove("menu-is-open");
-    document.body.style.overflow = "";
-  }
+  document.getElementById("menuOverlay").classList.add("menu-is-open");
+  document.body.style.overflow = "hidden";
+}
 
+function closeMenu() {
+  document.getElementById("menuOverlay").classList.remove("menu-is-open");
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
   const contactSubmitButton = document.getElementById("contactSubmitButton");
-  
+
   const contactNameInput = document.getElementById("contact-name");
   const contactEmailInput = document.getElementById("contact-email");
+  const contactMessageInput = document.getElementById("contact-message");
   const contactPrivacyCheckbox = document.getElementById("contact-privacy");
-  
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const privacyError = document.getElementById("privacyError");
+  const contactStatusText = document.getElementById("contactStatusText");
+
+  if (!contactForm) {
+    return;
+  }
+
+  function isNameValid() {
+    return contactNameInput.value.trim().length > 0;
+  }
+
+  function isEmailValid() {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmailInput.value.trim());
+  }
+
+  function isPrivacyChecked() {
+    return contactPrivacyCheckbox.checked;
+  }
+
   function checkIfContactFormIsValid() {
-    const nameIsValid = contactNameInput.value.trim().length > 0;
-    const emailIsValid = contactEmailInput.value.trim().length > 0;
-    const privacyIsChecked = contactPrivacyCheckbox.checked;
-  
-    contactSubmitButton.disabled = !(nameIsValid && emailIsValid && privacyIsChecked);
+    const formIsValid = isNameValid() && isEmailValid() && isPrivacyChecked();
+    contactSubmitButton.disabled = !formIsValid;
   }
-  
-  if (contactForm) {
-    contactNameInput.addEventListener("input", checkIfContactFormIsValid);
-    contactEmailInput.addEventListener("input", checkIfContactFormIsValid);
-    contactPrivacyCheckbox.addEventListener("change", checkIfContactFormIsValid);
-  
-    checkIfContactFormIsValid();
+
+  function showFieldErrors() {
+    nameError.textContent = isNameValid() ? "" : "Bitte gib deinen Namen ein.";
+    emailError.textContent = isEmailValid() ? "" : "Bitte gib eine gültige E-Mail-Adresse ein.";
+    privacyError.textContent = isPrivacyChecked()
+      ? ""
+      : "Bitte akzeptiere die Datenschutzerklärung.";
   }
-  
-function isContactEmailValid() {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmailInput.value.trim());
-}
 
-function isContactPrivacyValid() {
-  return contactPrivacyCheckbox.checked;
-}
+  contactNameInput.addEventListener("input", checkIfContactFormIsValid);
+  contactEmailInput.addEventListener("input", checkIfContactFormIsValid);
+  contactPrivacyCheckbox.addEventListener("change", checkIfContactFormIsValid);
 
-function validateContactForm() {
-  const formIsValid =
-    isContactNameValid() && isContactEmailValid() && isContactPrivacyValid();
-
-  contactSubmitButton.disabled = !formIsValid;
-}
-
-function showContactFieldErrors() {
-  nameError.textContent = isContactNameValid()
-    ? ""
-    : "Bitte gib deinen Namen ein.";
-
-  emailError.textContent = isContactEmailValid()
-    ? ""
-    : "Bitte gib eine gültige E-Mail-Adresse ein.";
-
-  privacyError.textContent = isContactPrivacyValid()
-    ? ""
-    : "Bitte akzeptiere die Datenschutzerklärung.";
-}
-
-if (contactForm) {
-  contactNameInput.addEventListener("blur", showContactFieldErrors);
-  contactEmailInput.addEventListener("blur", showContactFieldErrors);
-  contactPrivacyCheckbox.addEventListener("change", showContactFieldErrors);
-
-  contactNameInput.addEventListener("input", validateContactForm);
-  contactEmailInput.addEventListener("input", validateContactForm);
-  contactPrivacyCheckbox.addEventListener("change", validateContactForm);
+  contactNameInput.addEventListener("blur", showFieldErrors);
+  contactEmailInput.addEventListener("blur", showFieldErrors);
+  contactPrivacyCheckbox.addEventListener("change", showFieldErrors);
 
   contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    showContactFieldErrors();
-    validateContactForm();
+    showFieldErrors();
+    checkIfContactFormIsValid();
 
     if (contactSubmitButton.disabled) {
       return;
@@ -104,14 +94,15 @@ if (contactForm) {
         contactStatusText.textContent = "Danke! Deine Nachricht wurde gesendet.";
         contactForm.reset();
       } else {
-        contactStatusText.textContent =
-          "Leider konnte die Nachricht nicht gesendet werden.";
+        contactStatusText.textContent = "Leider konnte die Nachricht nicht gesendet werden.";
       }
     } catch (error) {
       contactStatusText.textContent =
         "Es gab ein technisches Problem. Bitte versuche es später erneut.";
     }
 
-    validateContactForm();
+    checkIfContactFormIsValid();
   });
-}
+
+  checkIfContactFormIsValid();
+});

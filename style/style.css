@@ -1275,7 +1275,7 @@ img {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 540px) {
   .hero-main-title {
     font-size: 32px;
   }
@@ -1323,6 +1323,10 @@ img {
 
   .portfolio-title{
     font-size: 32px;
+  }
+
+  .menu-links-container {
+    margin-top: 80px;
   }
 
   .menu-big-link {
@@ -1422,7 +1426,7 @@ img {
     font-size: 14px;
     margin-top: 12px;
     order: 2;
-    display: visible;
+    display: block;
   }
 }
 

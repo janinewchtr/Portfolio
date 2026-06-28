@@ -74,14 +74,16 @@ const translations = {
 };
 
 function changeLanguage(language) {
-  const translatedTexts = translations[language];
+  const texts = translations[language];
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const translationKey = element.dataset.i18n;
+    const key = element.dataset.i18n;
+    element.textContent = texts[key];
+  });
 
-    if (translatedTexts[translationKey]) {
-      element.innerHTML = translatedTexts[translationKey];
-    }
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    const key = element.dataset.i18nHtml;
+    element.innerHTML = texts[key];
   });
 
   document.querySelectorAll("[data-language-button]").forEach((button) => {
@@ -89,6 +91,7 @@ function changeLanguage(language) {
   });
 
   document.documentElement.lang = language;
+  localStorage.setItem("selectedLanguage", language);
 }
 
 document.querySelectorAll("[data-language-button]").forEach((button) => {
@@ -97,7 +100,9 @@ document.querySelectorAll("[data-language-button]").forEach((button) => {
   });
 });
 
-changeLanguage("de");
+const savedLanguage = localStorage.getItem("selectedLanguage") || "de";
+changeLanguage(savedLanguage);
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");

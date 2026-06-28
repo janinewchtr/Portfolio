@@ -998,8 +998,7 @@ img {
 /* ==================================================
    12. Media Queries
 ================================================== */
-
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .hero-main-title {
     font-size: 72px;
   }
@@ -1036,6 +1035,14 @@ img {
 
   .portfolio-title{
     font-size: 62px;
+  }
+
+  .portfolio-project-card{
+    gap: 32px;
+  }
+
+  .menu-links-container{
+    margin-top: 200px;
   }
 }
 

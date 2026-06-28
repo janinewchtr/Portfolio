@@ -1017,21 +1017,37 @@ img {
 @media (max-width: 900px) {
   .portfolio-project-card,
   .portfolio-project-card-right {
-    gap: 32px;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
   }
 
-  .portfolio-project-card-right .portfolio-project-info-container,
-  .portfolio-project-card-right .portfolio-image-wrapper {
-    order: initial;
+  .portfolio-project-info-container,
+  .portfolio-project-card-right .portfolio-project-info-container {
+    display: contents;
   }
 
   .portfolio-project-number {
-    margin-bottom: 28px;
+    order: 1;
+    margin: 0;
+    width: 100%;
   }
 
-  .portfolio-project-info-container {
-    max-width: 100%;
+  .portfolio-image-wrapper,
+  .portfolio-project-card-right .portfolio-image-wrapper {
+    order: 2;
+  }
+
+  .portfolio-project-hover-info {
+    order: 3;
+  }
+
+  .portfolio-project-card:nth-of-type(odd) .portfolio-project-number {
+    text-align: right;
+  }
+
+  .portfolio-project-card:nth-of-type(even) .portfolio-project-number {
+    text-align: left;
   }
 
   .portfolio-project-title {
@@ -1041,9 +1057,7 @@ img {
   .portfolio-project-tech {
     font-size: 20px;
   }
-}
 
-@media (max-width: 900px) {
   .contact-section {
     padding: 140px 20px 34px;
   }
@@ -1067,6 +1081,10 @@ img {
   .contact-scroll-top-link {
     bottom: 120px;
     right: 20px;
+  }
+
+  .hero-text-container{
+    margin-left: 28px;
   }
 }
 

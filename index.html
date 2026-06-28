@@ -50,9 +50,17 @@
         </div>
       
         <nav class="menu-links-container">
-          <a class="menu-big-link" href="#about-me" onclick="closeMenu()">Über mich</a>
-          <a class="menu-big-link" href="#skills" onclick="closeMenu()">Meine Skills</a>
-          <a class="menu-big-link" href="#portfolio" onclick="closeMenu()">Portfolio</a>
+          <a class="menu-big-link" href="#about-me" onclick="closeMenu()" data-i18n="menuAbout">
+            Über mich
+          </a>
+          
+          <a class="menu-big-link" href="#skills" onclick="closeMenu()" data-i18n="menuSkills">
+            Meine Skills
+          </a>
+          
+          <a class="menu-big-link" href="#portfolio" onclick="closeMenu()" data-i18n="menuPortfolio">
+            Portfolio
+          </a>
         </nav>
       
         <div class="menu-contact-section">
@@ -84,7 +92,7 @@
         <p class="side-domain-text">janine-waechter.de</p>
 
         <div class="hero-text-container">
-          <h1 class="hero-main-title">
+          <h1 class="hero-main-title" data-i18n="heroTitle">
             Frontend<br />
             Developerin
           </h1>
@@ -103,7 +111,7 @@
 
       <section class="about-me-section" id="about-me">
         <div class="about-me-text-container">
-          <h2 class="section-title">Über mich</h2>
+          <h2 class="section-title" data-i18n="aboutTitle">Über mich</h2>
 
           <p class="normal-text">
             Ich bin Quereinsteigerin aus dem kaufmännischen Bereich und seit zwei Jahren in der IT tätig. 
@@ -121,7 +129,7 @@
             </div>
           </div>
 
-          <a class="small-button" href="#contact">Let's talk</a>
+          <a class="small-button" href="#contact" data-i18n="aboutButton">Lass uns sprechen</a>
         </div>
 
         <div class="portrait-image-container">
@@ -136,7 +144,7 @@
       <section class="skills-section" id="skills">
       
         <div class="skills-box">
-          <h2 class="skills-title">Meine Skills</h2>
+          <h2 class="skills-title" data-i18n="skillsTitle">Meine Skills</h2>
       
           <div class="skills-icons-container">
             <div class="single-skill-container">
@@ -183,7 +191,7 @@
           <div class="skills-contact-container">
             <img class="skills-learn-icon" src="./assets/img/learn.png" alt="" />
       
-            <p class="skills-contact-text">
+            <p class="skills-contact-text" data-i18n="skillsContactText">
               Du findest den gesuchten Skill nicht?
               <a class="skills-contact-link" href="#contact">Schreib mir.</a>
               Ich bin immer bereit zu lernen!
@@ -195,8 +203,8 @@
 
     <section class="portfolio-section" id="portfolio">
       <div class="portfolio-headline-container">
-        <h2 class="portfolio-title">Portfolio</h2>
-        <p class="portfolio-intro-text">
+        <h2 class="portfolio-title" data-i18n="portfolioTitle">Portfolio</h2>
+        <p class="portfolio-intro-text" data-i18n="portfolioIntro">
           Hier findest du eine Auswahl meiner Projekte. Entdecke sie und gewinne einen Einblick in meine Fähigkeiten und Arbeitsweise.
         </p>
       </div>
@@ -295,14 +303,16 @@
         <h2 class="contact-main-title">Say Hi!</h2>
     
         <div class="contact-form-container">
-          <h3 class="contact-question-title">Möchtest du ein neues Projekt besprechen?</h3>
+          <h3 class="contact-question-title" data-i18n="contactQuestion">
+            Möchtest du ein neues Projekt besprechen?
+          </h3>
     
-          <p class="contact-intro-text">
+          <p class="contact-intro-text" data-i18n="contactIntro">
             Sag Hallo! Lass uns über deine Ideen sprechen und sie gemeinsam umsetzen.
           </p>
     
           <form class="contact-form" id="contactForm">
-            <label class="contact-label" for="contact-name">Dein Name *</label>
+            <label class="contact-label" for="contact-name" data-i18n="contactName">Dein Name *</label>
             <input
               class="contact-input"
               id="contact-name"
@@ -313,7 +323,7 @@
             />
             <p class="contact-error-text" id="nameError"></p>
           
-            <label class="contact-label" for="contact-email">Deine E-Mail *</label>
+            <label class="contact-label" for="contact-email" data-i18n="contactEmail">Deine E-Mail *</label>
             <input
               class="contact-input"
               id="contact-email"
@@ -324,7 +334,7 @@
             />
             <p class="contact-error-text" id="emailError"></p>
           
-            <label class="contact-label" for="contact-message">Deine Nachricht</label>
+            <label class="contact-label" for="contact-message" data-i18n="contactMessage">Deine Nachricht</label>
             <textarea
               class="contact-input contact-textarea"
               id="contact-message"
@@ -339,7 +349,7 @@
                 type="checkbox"
                 required
               />
-              <span>
+              <span data-i18n="contactPrivacy">
                 Ich habe die
                 <a class="contact-privacy-link" href="./datenschutz.html">Datenschutzerklärung</a>
                 gelesen und stimme der Verarbeitung meiner Daten zu. *
@@ -347,7 +357,7 @@
             </label>
             <p class="contact-error-text" id="privacyError"></p>
           
-            <button class="contact-submit-button" id="contactSubmitButton" type="submit" disabled>
+            <button class="contact-submit-button" id="contactSubmitButton" type="submit" disabled data-i18n="contactButton">
               Nachricht senden
             </button>
           
@@ -397,7 +407,9 @@
               </a>
             </div>
     
-            <a class="contact-legal-link" href="./impressum.html">Impressum</a>
+            <a class="contact-legal-link" href="./impressum.html" data-i18n="legalNotice">
+              Impressum
+            </a>
           </div>
         </footer>
       </div>

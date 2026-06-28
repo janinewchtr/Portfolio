@@ -1001,16 +1001,41 @@ img {
 
 @media (max-width: 1000px) {
   .hero-main-title {
-    font-size: 88px;
+    font-size: 72px;
   }
 
   .menu-big-link {
-    font-size: clamp(48px, 8vw, 76px);
+    font-size: 62px
   }
 
   .menu-big-link::before {
     height: 56px;
     width: 44px;
+  }
+
+  .header-language-button {
+    font-size: 32px;
+  }
+
+  .logo-link{
+    font-size: 32px;
+  }
+
+  .burger-menu-icon{
+    height: 32px;
+    width: 32px;
+  }
+
+  .section-title{
+    font-size: 62px;
+  }
+
+  .skills-title{
+    font-size: 62px;
+  }
+
+  .portfolio-title{
+    font-size: 62px;
   }
 }
 
@@ -1120,9 +1145,7 @@ img {
   .legal-footer-right {
     align-items: flex-start;
   }
-}
 
-@media (max-width: 800px) {
   .header-container {
     padding: 20px;
   }
@@ -1147,7 +1170,7 @@ img {
   }
 
   .hero-main-title {
-    font-size: 56px;
+    font-size: 48px;
   }
 
   .hero-line-and-name-container {
@@ -1235,11 +1258,15 @@ img {
     flex-direction: column;
     text-align: center;
   }
+
+  .portfolio-title{
+    font-size: 48px;
+  }
 }
 
 @media (max-width: 520px) {
   .hero-main-title {
-    font-size: 44px;
+    font-size: 32px;
   }
 
   .skills-box {
@@ -1269,5 +1296,48 @@ img {
   .skills-arrow-bottom {
     height: 90px;
     width: 90px;
+  }
+  .section-title{
+    font-size: 32px;
+  }
+
+  .portfolio-title{
+    font-size: 32px;
+  }
+
+  .menu-big-link {
+    font-size: 28px;
+  }
+
+  .menu-contact-title{
+    font-size: 16px;
+  }
+
+  .menu-email-link{
+    font-size: 12px;
+  }
+
+  .menu-language-button{
+    font-size: 16px;
+  }
+
+  .menu-language-container{
+    gap: 8px;
+  }
+
+  .menu-header-right-container{
+    gap: 16px;
+  }
+
+  .menu-social-links-container{
+    gap: 4px;
+  }
+
+  .menu-contact-section{
+    gap: 28px;
+  }
+
+  .menu-header-container{
+    padding: 42px 4% 20px;
   }
 }

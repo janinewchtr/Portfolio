@@ -1301,6 +1301,12 @@ a {
 }
 
 @media (max-width: 540px) {
+  .menu-overlay {
+    height: 100dvh;
+    min-height: 100dvh;
+    overflow: hidden;
+  }
+
   .hero-main-title {
     font-size: 32px;
   }
@@ -1346,11 +1352,12 @@ a {
     height: 90px;
     width: 90px;
   }
-  .section-title{
+
+  .section-title {
     font-size: 32px;
   }
 
-  .portfolio-title{
+  .portfolio-title {
     font-size: 32px;
   }
 
@@ -1362,35 +1369,50 @@ a {
     font-size: 28px;
   }
 
-  .menu-contact-title{
+  .menu-contact-title {
     font-size: 16px;
   }
 
-  .menu-email-link{
+  .menu-email-link {
     font-size: 12px;
   }
 
-  .menu-language-button{
+  .menu-language-button {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: var(--color-black);
     font-size: 16px;
   }
 
-  .menu-language-container{
+  .close-menu-button {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: var(--color-black);
+  }
+
+  .menu-language-container {
     gap: 8px;
   }
 
-  .menu-header-right-container{
+  .menu-header-right-container {
     gap: 16px;
   }
 
-  .menu-social-links-container{
+  .menu-social-links-container {
     gap: 4px;
   }
 
-  .menu-contact-section{
+  .menu-contact-section,
+  .menu-black-bottom-section {
+    bottom: 0;
     gap: 28px;
+    min-height: 165px;
+    padding: 56px 4% 22px;
   }
 
-  .menu-header-container{
+  .menu-header-container {
     padding: 42px 4% 20px;
   }
 
@@ -1452,10 +1474,10 @@ a {
   }
 
   .contact-footer-email {
+    display: block;
     font-size: 14px;
     margin-top: 12px;
     order: 2;
-    display: block;
   }
 }
 

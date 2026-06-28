@@ -120,7 +120,6 @@ a {
 
 .header-language-button,
 .menu-language-button,
-.language-option,
 .close-menu-button {
   appearance: none;
   -webkit-appearance: none;
@@ -171,7 +170,7 @@ a {
   gap: 28px;
 }
 
-.language-option,
+
 .menu-language-button {
   background-color: transparent;
   border: 0;
@@ -224,7 +223,6 @@ a {
   width: 46px;
 }
 
-.menu-black-bottom-section,
 .menu-contact-section {
   align-items: flex-end;
   background-color: var(--color-black);
@@ -510,24 +508,6 @@ a {
   margin: 0 8px;
 }
 
-.skills-arrow-top {
-  height: 160px;
-  object-fit: contain;
-  position: absolute;
-  right: 12%;
-  top: 0;
-  width: 160px;
-}
-
-.skills-arrow-bottom {
-  bottom: -20px;
-  height: 160px;
-  left: 7%;
-  object-fit: contain;
-  position: absolute;
-  transform: rotate(180deg);
-  width: 160px;
-}
 
 /* ==================================================
    9. Portfolio
@@ -555,12 +535,6 @@ a {
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
-}
-
-.portfolio-projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 110px;
 }
 
 .portfolio-project-card {
@@ -963,57 +937,6 @@ a {
   color: var(--color-green);
 }
 
-.legal-footer-section {
-  align-items: flex-end;
-  background-color: var(--color-black);
-  clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 100%);
-  color: var(--color-cream-background);
-  display: flex;
-  justify-content: space-between;
-  min-height: 210px;
-  padding: 78px 8% 34px;
-}
-
-.legal-footer-logo {
-  display: inline-block;
-  font-family: "Syne", Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 16px;
-}
-
-.legal-footer-copyright {
-  font-size: 20px;
-  margin: 0;
-}
-
-.legal-footer-right {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.legal-footer-social-container {
-  display: flex;
-  gap: 34px;
-}
-
-.legal-footer-social-link {
-  display: block;
-  height: 34px;
-  width: 34px;
-}
-
-.legal-footer-social-icon {
-  height: 100%;
-  object-fit: contain;
-  width: 100%;
-}
-
-.legal-footer-link {
-  font-size: 15px;
-}
 
 .legal-page-footer {
   background-color: var(--color-black);
@@ -1171,17 +1094,6 @@ a {
     font-size: 16px;
   }
 
-  .legal-footer-section {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 34px;
-    padding: 70px 20px 32px;
-  }
-
-  .legal-footer-right {
-    align-items: flex-start;
-  }
-
   .header-container {
     padding: 20px;
   }
@@ -1240,10 +1152,6 @@ a {
     gap: 24px;
   }
 
-  .language-option {
-    font-size: 18px;
-  }
-
   .close-menu-button {
     font-size: 58px;
   }
@@ -1263,14 +1171,6 @@ a {
     border-left-width: 3px;
     height: 44px;
     width: 34px;
-  }
-
-  .menu-black-bottom-section {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 28px;
-    min-height: 220px;
-    padding: 70px 20px 30px;
   }
 
   .menu-social-links-container {
@@ -1347,12 +1247,6 @@ a {
     font-size: 18px;
   }
 
-  .skills-arrow-top,
-  .skills-arrow-bottom {
-    height: 90px;
-    width: 90px;
-  }
-
   .section-title {
     font-size: 32px;
   }
@@ -1404,8 +1298,7 @@ a {
     gap: 4px;
   }
 
-  .menu-contact-section,
-  .menu-black-bottom-section {
+  .menu-contact-section {
     bottom: 0;
     gap: 28px;
     min-height: 165px;

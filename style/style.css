@@ -1301,98 +1301,161 @@ a {
 }
 
 @media (max-width: 540px) {
-  .menu-overlay {
-    height: 100dvh;
-    min-height: 100dvh;
-    overflow: hidden;
+  .hero-main-title {
+    font-size: 32px;
   }
 
-  .menu-header-container,
-  .menu-top-container {
-    padding: 32px 40px 0;
+  .legal-notice-main-title {
+    font-size: 16px;
   }
 
-  .menu-header-right-container,
-  .menu-top-right-container {
-    gap: 24px;
+  .logo-link {
+    font-size: 16px;
   }
 
-  .menu-language-container,
-  .language-switch-container {
-    gap: 16px;
+  .burger-menu-icon {
+    height: 20px;
+    width: 20px;
   }
 
-  .menu-language-button,
-  .language-option {
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: transparent;
-    color: var(--color-black);
-    font-size: 20px;
-    padding: 4px 10px;
+  .skills-box {
+    border-width: 3px;
+    padding: 48px 20px 40px;
   }
 
-  .close-menu-button {
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: transparent;
-    color: var(--color-black);
-    font-size: 56px;
+  .skills-title {
+    font-size: 38px;
+    padding: 0 14px;
+  }
+
+  .skills-icons-container {
+    gap: 36px 24px;
+  }
+
+  .skill-icon {
+    height: 56px;
+    width: 56px;
+  }
+
+  .skills-contact-text {
+    font-size: 18px;
+  }
+
+  .skills-arrow-top,
+  .skills-arrow-bottom {
+    height: 90px;
+    width: 90px;
+  }
+  .section-title{
+    font-size: 32px;
+  }
+
+  .portfolio-title{
+    font-size: 32px;
   }
 
   .menu-links-container {
-    gap: 34px;
-    margin: 120px auto 0;
-    max-width: 100%;
-    padding: 0 40px;
+    margin-top: 80px;
   }
 
   .menu-big-link {
-    font-size: 34px;
-    gap: 22px;
-    line-height: 1;
+    font-size: 28px;
   }
 
-  .menu-big-link::before {
-    border-bottom-width: 3px;
-    border-left-width: 3px;
-    height: 48px;
-    width: 36px;
+  .menu-contact-title{
+    font-size: 16px;
   }
 
-  .menu-contact-section,
-  .menu-black-bottom-section {
-    align-items: flex-start;
-    bottom: 0;
-    clip-path: polygon(0 0, 100% 22%, 100% 100%, 0 100%);
-    flex-direction: row;
-    min-height: 185px;
-    padding: 64px 40px 28px;
+  .menu-email-link{
+    font-size: 12px;
   }
 
-  .menu-contact-title {
-    font-size: 32px;
-    margin: 0 0 10px;
+  .menu-language-button{
+    font-size: 16px;
   }
 
-  .menu-email-link {
-    font-size: 15px;
+  .menu-language-container{
+    gap: 8px;
   }
 
-  .menu-social-links-container {
+  .menu-header-right-container{
+    gap: 16px;
+  }
+
+  .menu-social-links-container{
+    gap: 4px;
+  }
+
+  .menu-contact-section{
+    gap: 28px;
+  }
+
+  .menu-header-container{
+    padding: 42px 4% 20px;
+  }
+
+  .contact-section {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  }
+
+  .contact-footer-container {
     align-items: center;
-    gap: 24px;
-    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 46px;
+    position: static;
+    text-align: center;
+    width: 100%;
   }
 
-  .menu-social-link {
+  .contact-footer-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    order: 1;
+  }
+
+  .contact-social-links-container {
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+    order: 1;
+  }
+
+  .contact-social-link {
     height: 34px;
     width: 34px;
   }
 
-  .menu-social-icon {
-    height: 100%;
-    width: 100%;
+  .contact-footer-left {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .contact-logo-link {
+    font-size: 32px;
+    margin: 0;
+    order: 1;
+  }
+
+  .contact-copyright-text {
+    display: none;
+  }
+
+  .contact-legal-link {
+    font-size: 14px;
+    order: 3;
+  }
+
+  .contact-footer-email {
+    font-size: 14px;
+    margin-top: 12px;
+    order: 2;
+    display: block;
   }
 }
 

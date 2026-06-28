@@ -725,6 +725,10 @@ img {
   text-align: center;
 }
 
+.contact-footer-email{
+  display: none;
+}
+
 .contact-intro-text {
   font-size: 20px;
   line-height: 1.4;
@@ -1276,6 +1280,15 @@ img {
     font-size: 32px;
   }
 
+  .logo-link {
+    font-size: 16px;
+  }
+
+  .burger-menu-icon {
+    height: 20px;
+    width: 20px;
+  }
+
   .skills-box {
     border-width: 3px;
     padding: 48px 20px 40px;
@@ -1346,5 +1359,100 @@ img {
 
   .menu-header-container{
     padding: 42px 4% 20px;
+  }
+
+  .contact-section {
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  }
+
+  .contact-footer-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 46px;
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+
+  .contact-footer-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    order: 1;
+  }
+
+  .contact-social-links-container {
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+    order: 1;
+  }
+
+  .contact-social-link {
+    height: 34px;
+    width: 34px;
+  }
+
+  .contact-footer-left {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .contact-logo-link {
+    font-size: 32px;
+    margin: 0;
+    order: 1;
+  }
+
+  .contact-copyright-text {
+    display: none;
+  }
+
+  .contact-legal-link {
+    font-size: 14px;
+    order: 3;
+  }
+
+  .contact-footer-email {
+    font-size: 14px;
+    margin-top: 12px;
+    order: 2;
+    display: visible;
+  }
+}
+
+@media (min-width: 1920px) {
+  .portfolio-project-card {
+    gap: 480px;
+  }
+
+  .normal-text {
+    font-size: 24px;
+  }
+
+  .short-info-text {
+    font-size: 20px;
+  }
+
+  .small-button {
+    font-size: 24px;
+    padding: 16px 32px;
+  }
+
+  .skill-name {
+    font-size: 20px;
+  }
+
+  .skills-contact-text {
+    font-size: 24px;
+  }
+
+  .portfolio-intro-text {
+    font-size: 20px;
   }
 }

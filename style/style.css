@@ -52,6 +52,12 @@ img {
   max-width: 100%;
 }
 
+button,
+a {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ==================================================
    4. Header
 ================================================== */
@@ -110,6 +116,16 @@ img {
   height: 24px;
   object-fit: contain;
   width: 24px;
+}
+
+.header-language-button,
+.menu-language-button,
+.language-option,
+.close-menu-button {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: var(--color-black);
 }
 
 /* ==================================================

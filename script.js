@@ -16,6 +16,8 @@ const translations = {
 
     heroTitle: "Frontend<br />Developerin",
     aboutTitle: "Über mich",
+    aboutText:"Ich bin Quereinsteigerin aus dem kaufmännischen Bereich und seit zwei Jahren in der IT tätig. Zur Programmierung hat mich der direkte Draht zwischen Idee und Ergebnis gebracht, also etwas zu bauen, das funktioniert und einen echten Unterschied macht. In meinem Arbeitsalltag verantworte ich IT-Projekte in einem mittelständischen Unternehmen, von der Systemeinführung über Projektleitung bis zur Steuerung interner Softwareprojekte. Durch meine Arbeit bringe ich ein Prozessverständnis mit, das mir hilft, Probleme sowohl aus der Entwickler- als auch aus der Endnutzerperspektive zu betrachten. Mit der Fullstack-Fortbildung baue ich meine Frontend-Skills jetzt gezielt weiter aus.",
+    aboutLocation: "Wohnhaft in Detmold",
     aboutButton: "Lass uns sprechen",
 
     skillsTitle: "Meine Skills",
@@ -25,7 +27,9 @@ const translations = {
     portfolioTitle: "Portfolio",
     portfolioIntro:
       "Hier findest du eine Auswahl meiner Projekte. Entdecke sie und gewinne einen Einblick in meine Fähigkeiten und Arbeitsweise.",
-
+    joinDescription:"Ein Kanban-Projektmanagement-Tool zum Erstellen, Verwalten und Organisieren von Aufgaben.",
+    sharkieDescription:"Ein Jump-and-Run-Spiel, bei dem Sharkie Münzen sammelt und gegen Gegner kämpft.",
+    pokedexDescription:"Eine Pokémon-App mit API-Anbindung, Suchfunktion und Detailansicht einzelner Pokémon.",
     contactQuestion: "Möchtest du ein neues Projekt besprechen?",
     contactIntro: "Sag Hallo! Lass uns über deine Ideen sprechen und sie gemeinsam umsetzen.",
     contactName: "Dein Name *",
@@ -44,6 +48,8 @@ const translations = {
 
     heroTitle: "Frontend<br />Developer",
     aboutTitle: "About me",
+    aboutText:"I come from a commercial business background and have been working in IT for two years. What drew me to programming was the direct connection between an idea and a visible result: building something that works and creates real value. In my daily work, I manage IT projects in a medium-sized company, from system implementation and project coordination to steering internal software projects. This experience gives me a strong understanding of processes and helps me look at challenges from both a developer’s and an end user’s perspective. Through my full-stack training, I am now deliberately expanding my frontend skills.",
+    aboutLocation: "Based in Detmold",
     aboutButton: "Let’s talk",
 
     skillsTitle: "My skills",
@@ -51,9 +57,10 @@ const translations = {
       'Don’t see the skill you need? <a class="skills-contact-link" href="#contact">Contact me.</a> I’m always ready to learn!',
 
     portfolioTitle: "Portfolio",
-    portfolioIntro:
-      "Explore a selection of my work. Interact with projects to see my skills in action.",
-
+    portfolioIntro:"Explore a selection of my work. Interact with projects to see my skills in action.",
+    joinDescription:"A Kanban project management tool for creating, managing, and organizing tasks.",
+    sharkieDescription:"A jump-and-run game where Sharkie collects coins and fights enemies.",
+    pokedexDescription:"A Pokémon app with API integration, search functionality, and detailed views for individual Pokémon.",
     contactQuestion: "Want to discuss a new project?",
     contactIntro: "Say hello! Let’s discuss your ideas and make it happen.",
     contactName: "Your name *",

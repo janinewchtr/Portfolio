@@ -29,11 +29,12 @@
           <div class="menu-top-right-container">
             <div class="language-switch-container">
                 <button class="menu-language-button" type="button" data-language-button data-language="en">
-                    EN
-                  </button>
-                  <button class="menu-language-button active-language" type="button" data-language-button data-language="de">
-                    DE
-                  </button>
+                EN
+              </button>
+              
+              <button class="menu-language-button active-language" type="button" data-language-button data-language="de">
+                DE
+              </button>
             </div>
   
             <button class="close-menu-button" type="button" onclick="closeMenu()">×</button>
@@ -84,94 +85,109 @@
         </div>
       </div>
 
-    <main class="legal-notice-page" id="legal-notice-page">
-      <section class="legal-notice-content">
-        <h1 class="legal-notice-main-title">Impressum</h1>
-
-        <div class="legal-notice-text-block">
-          <h2 class="legal-notice-section-title">Impressum</h2>
-
-          <ul class="legal-notice-list">
-            <li>Janine Wächter</li>
-            <li>Hornsche Straße 227</li>
-            <li>32760 Detmold</li>
-          </ul>
-
-          <h2 class="legal-notice-section-title">Kontakt</h2>
-
-          <p class="legal-notice-text">
-            E-Mail:
-            <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>
-          </p>
-
-          <h2 class="legal-notice-section-title">Annahme der Bedingungen</h2>
-
-          <p class="legal-notice-text">
-            Durch den Zugriff auf dieses Portfolio erkennen Sie die folgenden Bedingungen und
-            Hinweise an und erklären sich damit einverstanden. Diese Bedingungen können von Zeit zu
-            Zeit aktualisiert oder geändert werden, ohne dass eine gesonderte Mitteilung erfolgt.
-          </p>
-
-          <h2 class="legal-notice-section-title">Umfang und Eigentum des Produkts</h2>
-
-          <p class="legal-notice-text">
-            Dieses Portfolio wurde als persönliches Webentwicklungsprojekt erstellt. Es dient der
-            Präsentation meiner Fähigkeiten, Projekte und Erfahrungen im Bereich Frontend
-            Development. Die Inhalte haben einen informativen Zweck und stellen kein kommerzielles
-            Produktangebot dar.
-          </p>
-
-          <p class="legal-notice-text">
-            Das Design und die Umsetzung dieses Portfolios wurden im Rahmen meiner Ausbildung und
-            persönlichen Weiterentwicklung erstellt. Eine unerlaubte Nutzung, Vervielfältigung,
-            Veränderung, Verbreitung oder Nachbildung des Designs ist nicht gestattet.
-          </p>
-
-          <h2 class="legal-notice-section-title">Eigentumsrechte</h2>
-
-          <p class="legal-notice-text">
-            Alle Inhalte dieses Portfolios, einschließlich Texte, Bilder, Grafiken, Layouts,
-            Quellcode und sonstiger Bestandteile, unterliegen, soweit nicht anders gekennzeichnet,
-            meinen Rechten oder den Rechten der jeweils genannten Urheberinnen und Urheber.
-          </p>
-
-          <h2 class="legal-notice-section-title">Nutzung des Portfolios</h2>
-
-          <p class="legal-notice-text">
-            Dieses Portfolio darf ausschließlich zu rechtmäßigen Zwecken genutzt werden. Jede
-            Nutzung, die gegen geltendes Recht verstößt oder Rechte Dritter verletzt, ist untersagt.
-            Sie sind selbst verantwortlich für die Art und Weise, wie Sie mit den Inhalten dieser
-            Website interagieren.
-          </p>
-
-          <h2 class="legal-notice-section-title">
-            Haftungsausschluss und Haftungsbeschränkung
-          </h2>
-
-          <p class="legal-notice-text">
-            Die Inhalte dieses Portfolios werden mit größtmöglicher Sorgfalt erstellt. Dennoch kann
-            keine Gewähr für Vollständigkeit, Richtigkeit, Aktualität oder Verfügbarkeit der Inhalte
-            übernommen werden. Eine Haftung für direkte oder indirekte Schäden, die aus der Nutzung
-            dieser Website entstehen, ist ausgeschlossen, soweit gesetzlich zulässig.
-          </p>
-
-          <h2 class="legal-notice-section-title">Freistellung</h2>
-
-          <p class="legal-notice-text">
-            Sie erklären sich damit einverstanden, mich von Ansprüchen, Schäden, Verlusten oder
-            Kosten freizustellen, die aus einer rechtswidrigen Nutzung dieses Portfolios oder aus
-            einem Verstoß gegen diese Hinweise entstehen.
-          </p>
-
-          <p class="legal-notice-text">
-            Bei Fragen oder Hinweisen kontaktieren Sie mich bitte unter:
-            <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>.
-          </p>
-
-          <p class="legal-notice-text">Datum: 24. Juni 2026</p>
-        </div>
-      </section>
-    </main>
+      <main class="legal-notice-page" id="legal-notice-page">
+        <section class="legal-notice-content">
+          <h1 class="legal-notice-main-title" data-i18n="legalNoticeTitle">Impressum</h1>
+      
+          <div class="legal-notice-text-block">
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeImprintHeading">
+              Impressum
+            </h2>
+      
+            <ul class="legal-notice-list">
+              <li>Janine Wächter</li>
+              <li>Hornsche Straße 227</li>
+              <li>32760 Detmold</li>
+            </ul>
+      
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeContactHeading">
+              Kontakt
+            </h2>
+      
+            <p class="legal-notice-text">
+              <span data-i18n="legalNoticeEmailLabel">E-Mail:</span>
+              <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>
+            </p>
+      
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeTermsHeading">
+              Annahme der Bedingungen
+            </h2>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeTermsText">
+              Durch den Zugriff auf dieses Portfolio erkennen Sie die folgenden Bedingungen und Hinweise
+              an und erklären sich damit einverstanden. Diese Bedingungen können von Zeit zu Zeit
+              aktualisiert oder geändert werden, ohne dass eine gesonderte Mitteilung erfolgt.
+            </p>
+      
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeScopeHeading">
+              Umfang und Eigentum des Produkts
+            </h2>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeScopeTextOne">
+              Dieses Portfolio wurde als persönliches Webentwicklungsprojekt erstellt. Es dient der
+              Präsentation meiner Fähigkeiten, Projekte und Erfahrungen im Bereich Frontend Development.
+              Die Inhalte haben einen informativen Zweck und stellen kein kommerzielles Produktangebot dar.
+            </p>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeScopeTextTwo">
+              Das Design und die Umsetzung dieses Portfolios wurden im Rahmen meiner Ausbildung und
+              persönlichen Weiterentwicklung erstellt. Eine unerlaubte Nutzung, Vervielfältigung,
+              Veränderung, Verbreitung oder Nachbildung des Designs ist nicht gestattet.
+            </p>
+      
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeRightsHeading">
+              Eigentumsrechte
+            </h2>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeRightsText">
+              Alle Inhalte dieses Portfolios, einschließlich Texte, Bilder, Grafiken, Layouts, Quellcode
+              und sonstiger Bestandteile, unterliegen, soweit nicht anders gekennzeichnet, meinen Rechten
+              oder den Rechten der jeweils genannten Urheberinnen und Urheber.
+            </p>
+      
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeUseHeading">
+              Nutzung des Portfolios
+            </h2>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeUseText">
+              Dieses Portfolio darf ausschließlich zu rechtmäßigen Zwecken genutzt werden. Jede Nutzung,
+              die gegen geltendes Recht verstößt oder Rechte Dritter verletzt, ist untersagt. Sie sind
+              selbst verantwortlich für die Art und Weise, wie Sie mit den Inhalten dieser Website
+              interagieren.
+            </p>
+      
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeDisclaimerHeading">
+              Haftungsausschluss und Haftungsbeschränkung
+            </h2>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeDisclaimerText">
+              Die Inhalte dieses Portfolios werden mit größtmöglicher Sorgfalt erstellt. Dennoch kann
+              keine Gewähr für Vollständigkeit, Richtigkeit, Aktualität oder Verfügbarkeit der Inhalte
+              übernommen werden. Eine Haftung für direkte oder indirekte Schäden, die aus der Nutzung
+              dieser Website entstehen, ist ausgeschlossen, soweit gesetzlich zulässig.
+            </p>
+      
+            <h2 class="legal-notice-section-title" data-i18n="legalNoticeIndemnityHeading">
+              Freistellung
+            </h2>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeIndemnityText">
+              Sie erklären sich damit einverstanden, mich von Ansprüchen, Schäden, Verlusten oder Kosten
+              freizustellen, die aus einer rechtswidrigen Nutzung dieses Portfolios oder aus einem Verstoß
+              gegen diese Hinweise entstehen.
+            </p>
+      
+            <p class="legal-notice-text">
+              <span data-i18n="legalNoticeQuestionsText">
+                Bei Fragen oder Hinweisen kontaktieren Sie mich bitte unter:
+              </span>
+              <a href="mailto:janinewaechter95@gmail.com">janinewaechter95@gmail.com</a>.
+            </p>
+      
+            <p class="legal-notice-text" data-i18n="legalNoticeDate">Datum: 24. Juni 2026</p>
+          </div>
+        </section>
+      </main>
 
     <footer class="contact-footer-container legal-page-footer">
         <div class="contact-footer-left">
@@ -219,5 +235,6 @@
           </a>
         </div>
       </footer>
+      <script src="script.js"></script>     
   </body>
 </html>

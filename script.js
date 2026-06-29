@@ -123,7 +123,15 @@ const translations = {
     privacyFontsHeading: "12. Lokale Schriftarten",
     privacyFontsText:
       "Auf dieser Website werden Schriftarten lokal eingebunden. Beim Laden der Schriftarten findet keine Verbindung zu externen Schriftanbieter-Servern statt.",
-  },
+
+    nameError: "Bitte gib deinen Namen ein.",
+    emailError: "Bitte gib eine gültige E-Mail-Adresse ein.",
+    privacyError: "Bitte akzeptiere die Datenschutzerklärung.",
+    sendingMessage: "Nachricht wird gesendet ...",
+    successMessage: "Danke! Deine Nachricht wurde gesendet.",
+    sendErrorMessage: "Leider konnte die Nachricht nicht gesendet werden.",
+    technicalErrorMessage: "Es gab ein technisches Problem. Bitte versuche es später erneut.",  
+    },
 
   en: {
     menuAbout: "About me",
@@ -238,6 +246,14 @@ const translations = {
     privacyFontsHeading: "12. Local fonts",
     privacyFontsText:
       "Fonts are embedded locally on this website. When the fonts are loaded, no connection is made to external font provider servers.",
+
+    nameError: "Please enter your name.",
+    emailError: "Please enter a valid email address.",
+    privacyError: "Please accept the privacy policy.",
+    sendingMessage: "Your message is being sent ...",
+    successMessage: "Thank you! Your message has been sent.",
+    sendErrorMessage: "Unfortunately, your message could not be sent.",
+    technicalErrorMessage: "A technical problem occurred. Please try again later.",
   },
 };
 
@@ -282,6 +298,11 @@ document.addEventListener("DOMContentLoaded", function () {
   changeLanguage(savedLanguage);
 });
 
+function getCurrentTranslationText(key) {
+  const selectedLanguage = localStorage.getItem("selectedLanguage") || "de";
+  return translations[selectedLanguage][key];
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
   const contactSubmitButton = document.getElementById("contactSubmitButton");
@@ -318,13 +339,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showFieldErrors() {
-    nameError.textContent = isNameValid() ? "" : "Bitte gib deinen Namen ein.";
+    nameError.textContent = isNameValid()
+      ? ""
+      : getCurrentTranslationText("nameError");
+  
     emailError.textContent = isEmailValid()
       ? ""
-      : "Bitte gib eine gültige E-Mail-Adresse ein.";
+      : getCurrentTranslationText("emailError");
+  
     privacyError.textContent = isPrivacyChecked()
       ? ""
-      : "Bitte akzeptiere die Datenschutzerklärung.";
+      : getCurrentTranslationText("privacyError");
   }
 
   contactNameInput.addEventListener("input", checkIfContactFormIsValid);
@@ -346,7 +371,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     contactSubmitButton.disabled = true;
-    contactStatusText.textContent = "Nachricht wird gesendet ...";
+    contactStatusText.textContent = getCurrentTranslationText("sendingMessage");
 
     const contactData = {
       name: contactNameInput.value.trim(),
@@ -367,16 +392,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await response.json();
 
       if (result.success) {
-        contactStatusText.textContent =
-          "Danke! Deine Nachricht wurde gesendet.";
+        contactStatusText.textContent = getCurrentTranslationText("successMessage");
         contactForm.reset();
       } else {
-        contactStatusText.textContent =
-          "Leider konnte die Nachricht nicht gesendet werden.";
+        contactStatusText.textContent = getCurrentTranslationText("sendErrorMessage");
       }
     } catch (error) {
-      contactStatusText.textContent =
-        "Es gab ein technisches Problem. Bitte versuche es später erneut.";
+      contactStatusText.textContent = getCurrentTranslationText("technicalErrorMessage");
     }
 
     checkIfContactFormIsValid();

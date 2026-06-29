@@ -1202,6 +1202,15 @@ a {
   .contact-section{
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
   }
+
+  .contact-input:-webkit-autofill,
+  .contact-input:-webkit-autofill:hover,
+  .contact-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-cream-background);
+  -webkit-box-shadow: 0 0 0 1000px var(--color-black) inset;
+  box-shadow: 0 0 0 1000px var(--color-black) inset;
+  caret-color: var(--color-cream-background);
+  }
 }
 
 @media (max-width: 540px) {

@@ -1099,6 +1099,11 @@ html[lang="en"] .policy-privacy-main-title {
     font-size: 24px;
   }
 
+  .portfolio-hover-arrow {
+    height: 78px;
+    width: 78px;
+  }
+
 }
 
 @media (max-width: 1053px) {
@@ -1191,6 +1196,11 @@ html[lang="en"] .policy-privacy-main-title {
 
   .portfolio-project-tech {
     font-size: 20px;
+  }
+
+  .portfolio-hover-arrow {
+    height: 64px;
+    width: 64px;
   }
 
   .contact-section {
@@ -1396,6 +1406,11 @@ html[lang="en"] .policy-privacy-main-title {
     font-size: 18px;
   }
 
+  .portfolio-hover-arrow {
+    height: 48px;
+    width: 48px;
+  }
+
   .section-title {
     font-size: 32px;
   }
@@ -1572,6 +1587,10 @@ html[lang="en"] .policy-privacy-main-title {
   padding: 0 14px;
 }
 
+.portfolio-hover-arrow {
+  height: 32px;
+  width: 32px;
+}
 
 .contact-question-title {
   font-size: 28px;

@@ -328,7 +328,7 @@ a {
 
 .hero-main-title {
   font-family: "Syne", Arial, sans-serif;
-  font-size: clamp(24px, 8vw, 120px);
+  font-size: clamp(24px, 8vw, 110px);
   font-weight: 800;
   line-height: 0.9;
   max-width: 100%;
@@ -407,7 +407,7 @@ a {
   display: grid;
   gap: 72px;
   grid-template-columns: 1fr 360px;
-  padding: 96px 8%;
+  padding: 120px 8%;
 }
 
 .section-title {

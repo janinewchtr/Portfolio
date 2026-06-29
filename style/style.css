@@ -285,7 +285,7 @@ a {
 
 
 .side-email-link {
-  bottom: 48px;
+  bottom: 16px;
   left: 8%;
   position: absolute;
   right: auto;
@@ -1097,9 +1097,6 @@ a {
     right: 20px;
   }
 
-  .hero-text-container{
-    margin-left: 28px;
-  }
 }
 
 @media (max-width: 800px) {
@@ -1436,6 +1433,40 @@ a {
     height: 54px;
     width: 28px;
   }
+
+  .contact-scroll-top-icon {
+    display: none;
+}
+}
+
+@media (max-width: 360px) {
+
+  .hero-main-title {
+    font-size: 28px;
+}
+
+.side-email-link{
+  font-size: 16px
+}
+
+.skills-title {
+  font-size: 28px;
+  padding: 0 14px;
+}
+
+
+.contact-question-title {
+  font-size: 28px;
+}
+
+.contact-main-title {
+  font-size: 32px;
+}
+
+.contact-submit-button {
+  font-size: 20px;
+}
+
 }
 
 @media (min-width: 1440px) {

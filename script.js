@@ -338,15 +338,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function checkIfContactFormIsValid() {
-    const nameAndEmailAreValid = isNameValid() && isEmailValid();
+    const formIsValid = isNameValid() && isEmailValid() && isPrivacyChecked();
   
-    contactSubmitButton.disabled = !nameAndEmailAreValid;
     contactSubmitButton.classList.toggle(
       "contact-submit-button-is-disabled",
-      !nameAndEmailAreValid
+      !formIsValid
     );
   }
-
+  
   function showNameError() {
     nameError.textContent = isNameValid()
       ? ""
@@ -381,32 +380,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   contactPrivacyCheckbox.addEventListener("change", function () {
     showPrivacyError();
+    checkIfContactFormIsValid();
   });
 
   contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
-
+  
     privacyShouldShowError = true;
-
+  
     showNameError();
     showEmailError();
     showPrivacyError();
     checkIfContactFormIsValid();
-
+  
     if (!isNameValid() || !isEmailValid() || !isPrivacyChecked()) {
       return;
     }
-
+  
     contactSubmitButton.disabled = true;
     contactStatusText.textContent = getCurrentTranslationText("sendingMessage");
-
+  
     const contactData = {
       name: contactNameInput.value.trim(),
       email: contactEmailInput.value.trim(),
       message: contactMessageInput.value.trim(),
       privacy: contactPrivacyCheckbox.checked,
     };
-
+  
     try {
       const response = await fetch("./send-mail.php", {
         method: "POST",
@@ -415,15 +415,15 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(contactData),
       });
-
+  
       const result = await response.json();
-
+  
       if (result.success) {
         contactStatusText.textContent = getCurrentTranslationText("successMessage");
         contactForm.reset();
-
+  
         privacyShouldShowError = false;
-
+  
         nameError.textContent = "";
         emailError.textContent = "";
         privacyError.textContent = "";
@@ -433,7 +433,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       contactStatusText.textContent = getCurrentTranslationText("technicalErrorMessage");
     }
-
+  
+    contactSubmitButton.disabled = false;
     checkIfContactFormIsValid();
   });
 

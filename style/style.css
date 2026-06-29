@@ -920,16 +920,21 @@ a {
   transition: background-color 160ms ease, color 160ms ease, opacity 160ms ease;
 }
 
-.contact-submit-button:disabled {
+.contact-submit-button-is-disabled {
   border-color: var(--color-cream-background);
   color: var(--color-cream-background);
   cursor: default;
   opacity: 0.45;
 }
 
-.contact-submit-button:not(:disabled):hover {
+.contact-submit-button:not(.contact-submit-button-is-disabled):hover {
   background-color: var(--color-cream-background);
   color: var(--color-black);
+}
+
+.contact-submit-button:disabled {
+  cursor: default;
+  opacity: 0.45;
 }
 
 .contact-scroll-top-link {

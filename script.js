@@ -326,7 +326,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function isEmailValid() {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contactEmailInput.value.trim());
+    return /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(
+      contactEmailInput.value.trim()
+    );
   }
 
   function isPrivacyChecked() {
@@ -334,39 +336,55 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function checkIfContactFormIsValid() {
-    const formIsValid = isNameValid() && isEmailValid() && isPrivacyChecked();
-    contactSubmitButton.disabled = !formIsValid;
+    const nameAndEmailAreValid = isNameValid() && isEmailValid();
+    contactSubmitButton.disabled = !nameAndEmailAreValid;
   }
 
-  function showFieldErrors() {
+  function showNameError() {
     nameError.textContent = isNameValid()
       ? ""
       : getCurrentTranslationText("nameError");
-  
+  }
+
+  function showEmailError() {
     emailError.textContent = isEmailValid()
       ? ""
       : getCurrentTranslationText("emailError");
-  
+  }
+
+  function showPrivacyError() {
     privacyError.textContent = isPrivacyChecked()
       ? ""
       : getCurrentTranslationText("privacyError");
   }
 
-  contactNameInput.addEventListener("input", checkIfContactFormIsValid);
-  contactEmailInput.addEventListener("input", checkIfContactFormIsValid);
-  contactPrivacyCheckbox.addEventListener("change", checkIfContactFormIsValid);
+  contactNameInput.addEventListener("focus", showNameError);
 
-  contactNameInput.addEventListener("blur", showFieldErrors);
-  contactEmailInput.addEventListener("blur", showFieldErrors);
-  contactPrivacyCheckbox.addEventListener("change", showFieldErrors);
+  contactNameInput.addEventListener("input", function () {
+    showNameError();
+    checkIfContactFormIsValid();
+  });
+
+  contactEmailInput.addEventListener("focus", showEmailError);
+
+  contactEmailInput.addEventListener("input", function () {
+    showEmailError();
+    checkIfContactFormIsValid();
+  });
+
+  contactPrivacyCheckbox.addEventListener("change", function () {
+    privacyError.textContent = "";
+  });
 
   contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    showFieldErrors();
+    showNameError();
+    showEmailError();
+    showPrivacyError();
     checkIfContactFormIsValid();
 
-    if (contactSubmitButton.disabled) {
+    if (!isNameValid() || !isEmailValid() || !isPrivacyChecked()) {
       return;
     }
 
@@ -394,6 +412,10 @@ document.addEventListener("DOMContentLoaded", function () {
       if (result.success) {
         contactStatusText.textContent = getCurrentTranslationText("successMessage");
         contactForm.reset();
+
+        nameError.textContent = "";
+        emailError.textContent = "";
+        privacyError.textContent = "";
       } else {
         contactStatusText.textContent = getCurrentTranslationText("sendErrorMessage");
       }

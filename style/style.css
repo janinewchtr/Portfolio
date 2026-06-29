@@ -1043,12 +1043,14 @@ a {
   font-family: "Syne", Arial, sans-serif;
   font-size: clamp(42px, 7vw, 96px);
   font-weight: 800;
+  hyphens: manual;
   line-height: 1;
   margin: 40px 0 72px;
+  max-width: 100%;
 }
 
 .mobile-title-break {
-  display: none;
+  display: inline;
 }
 
 .legal-notice-text-block {
@@ -1537,8 +1539,7 @@ a {
 }
 
 .policy-privacy-main-title {
-  font-size: clamp(34px, 12vw, 48px);
-  line-height: 0.95;
+  font-size: clamp(34px, 11vw, 34px);
   margin: 32px 0 48px;
 }
 
@@ -1547,10 +1548,15 @@ a {
 }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 398px) {
 
   .hero-main-title {
     font-size: 28px;
+}
+
+.policy-privacy-main-title {
+  font-size: clamp(24px, 7vw, 24px);
+  margin: 32px 0 48px;
 }
 
 .side-email-link{

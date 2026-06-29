@@ -73,7 +73,7 @@ const translations = {
       "Bei Fragen oder Hinweisen kontaktieren Sie mich bitte unter:",
     legalNoticeDate: "Datum: 24. Juni 2026",
 
-    privacyTitle: "Datenschutzerklärung",
+    privacyTitle: "Datenschutz&shy;erklärung",
     privacyIntroHeading: "1. Einleitung",
     privacyIntroText:
       "Der Schutz Ihrer persönlichen Daten hat höchste Priorität. Diese Datenschutzerklärung erläutert die Art, den Umfang und den Zweck der Verarbeitung personenbezogener Daten im Zusammenhang mit diesem Onlineangebot.",

@@ -1053,6 +1053,10 @@ a {
   display: inline;
 }
 
+html[lang="en"] .policy-privacy-main-title {
+  white-space: nowrap;
+}
+
 .legal-notice-text-block {
   max-width: 980px;
 }

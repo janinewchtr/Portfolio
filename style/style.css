@@ -285,9 +285,17 @@ a {
 
 
 .side-email-link {
+  bottom: 48px;
+  left: 8%;
+  position: absolute;
+  right: auto;
+  top: auto;
   font-size: 18px;
+  font-weight: 400;
+  writing-mode: initial;
   transform: rotate(-90deg);
   transform-origin: left center;
+  z-index: 2;
 }
 
 .hero-text-container {

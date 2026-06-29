@@ -321,6 +321,8 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+  let privacyShouldShowError = false;
+
   function isNameValid() {
     return contactNameInput.value.trim().length > 0;
   }
@@ -337,7 +339,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function checkIfContactFormIsValid() {
     const nameAndEmailAreValid = isNameValid() && isEmailValid();
+  
     contactSubmitButton.disabled = !nameAndEmailAreValid;
+    contactSubmitButton.classList.toggle(
+      "contact-submit-button-is-disabled",
+      !nameAndEmailAreValid
+    );
   }
 
   function showNameError() {
@@ -353,9 +360,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showPrivacyError() {
-    privacyError.textContent = isPrivacyChecked()
-      ? ""
-      : getCurrentTranslationText("privacyError");
+    privacyError.textContent = privacyShouldShowError && !isPrivacyChecked()
+      ? getCurrentTranslationText("privacyError")
+      : "";
   }
 
   contactNameInput.addEventListener("focus", showNameError);
@@ -373,11 +380,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   contactPrivacyCheckbox.addEventListener("change", function () {
-    privacyError.textContent = "";
+    showPrivacyError();
   });
 
   contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
+
+    privacyShouldShowError = true;
 
     showNameError();
     showEmailError();
@@ -412,6 +421,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (result.success) {
         contactStatusText.textContent = getCurrentTranslationText("successMessage");
         contactForm.reset();
+
+        privacyShouldShowError = false;
 
         nameError.textContent = "";
         emailError.textContent = "";

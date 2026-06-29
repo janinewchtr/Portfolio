@@ -1033,10 +1033,22 @@ a {
 
 .legal-notice-main-title {
   font-family: "Syne", Arial, sans-serif;
-  font-size: 56px;
+  font-size: clamp(20px, 7vw, 96px);
   font-weight: 800;
   line-height: 1;
   margin: 40px 0 72px;
+}
+
+.policy-privacy-main-title {
+  font-family: "Syne", Arial, sans-serif;
+  font-size: clamp(42px, 7vw, 96px);
+  font-weight: 800;
+  line-height: 1;
+  margin: 40px 0 72px;
+}
+
+.mobile-title-break {
+  display: none;
 }
 
 .legal-notice-text-block {
@@ -1081,10 +1093,6 @@ a {
     font-size: 24px;
   }
 
-  .legal-notice-main-title{
-    font-size: 48px;
-  }
-
 }
 
 @media (max-width: 1053px) {
@@ -1125,10 +1133,6 @@ a {
 
   .portfolio-project-card{
     gap: 32px;
-  }
-
-  .legal-notice-main-title{
-    font-size: 42px;
   }
 
 }
@@ -1208,10 +1212,6 @@ a {
     right: 20px;
   }
 
-  .legal-notice-main-title{
-    font-size: 38px;
-  }
-
 }
 
 @media (max-width: 800px) {
@@ -1221,11 +1221,6 @@ a {
 
   .legal-notice-page {
     padding: 20px 20px 80px;
-  }
-
-  .legal-notice-main-title {
-    font-size: 28px;
-    margin: 40px 0 48px;
   }
 
   .legal-notice-section-title {
@@ -1361,10 +1356,6 @@ a {
     height: 100dvh;
     min-height: 100dvh;
     overflow: hidden;
-  }
-
-  .legal-notice-main-title {
-    font-size: 20px;
   }
 
   .logo-link {
@@ -1544,6 +1535,16 @@ a {
   .contact-scroll-top-icon {
     display: none;
 }
+
+.policy-privacy-main-title {
+  font-size: clamp(34px, 12vw, 48px);
+  line-height: 0.95;
+  margin: 32px 0 48px;
+}
+
+.mobile-title-break {
+  display: inline;
+}
 }
 
 @media (max-width: 360px) {
@@ -1572,10 +1573,6 @@ a {
 
 .contact-submit-button {
   font-size: 20px;
-}
-
-.legal-notice-main-title {
-  font-size: 16px;
 }
 
 }

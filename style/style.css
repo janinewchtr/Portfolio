@@ -1198,6 +1198,10 @@ a {
   .portfolio-title{
     font-size: 48px;
   }
+
+  .contact-section{
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  }
 }
 
 @media (max-width: 540px) {

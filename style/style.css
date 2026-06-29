@@ -545,7 +545,14 @@ a {
   height: 70px;
   object-fit: contain;
   width: 70px;
+  transition: transform 220ms ease;
+  transform-origin: center;
 }
+
+.skills-contact-container:hover .skills-learn-icon {
+  animation: skill-icon-small-circle 520ms ease-in-out;
+}
+
 
 .skills-contact-text {
   font-size: 22px;
@@ -637,8 +644,18 @@ a {
 .portfolio-project-hover-info {
   opacity: 0;
   pointer-events: none;
-  transform: translateY(12px);
+  transform: translateX(32px);
   transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.portfolio-project-card-right .portfolio-project-hover-info {
+  transform: translateX(-32px);
+}
+
+.portfolio-project-card:hover .portfolio-project-hover-info {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
 }
 
 .portfolio-project-title {
@@ -1014,6 +1031,10 @@ a {
     font-size: 24px;
   }
 
+  .legal-notice-main-title{
+    font-size: 48px;
+  }
+
 }
 
 @media (max-width: 1053px) {
@@ -1062,6 +1083,11 @@ a {
   .menu-links-container{
     margin-top: 200px;
   }
+
+  .legal-notice-main-title{
+    font-size: 42px;
+  }
+
 }
 
 @media (max-width: 900px) {
@@ -1133,6 +1159,10 @@ a {
     right: 20px;
   }
 
+  .legal-notice-main-title{
+    font-size: 38px;
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -1145,7 +1175,7 @@ a {
   }
 
   .legal-notice-main-title {
-    font-size: 26px;
+    font-size: 28px;
     margin: 40px 0 48px;
   }
 
@@ -1293,7 +1323,7 @@ a {
   }
 
   .legal-notice-main-title {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .logo-link {
@@ -1501,6 +1531,10 @@ a {
 
 .contact-submit-button {
   font-size: 20px;
+}
+
+.legal-notice-main-title {
+  font-size: 16px;
 }
 
 }

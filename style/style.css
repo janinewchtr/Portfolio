@@ -286,15 +286,22 @@ a {
 
 .side-email-link {
   font-size: 18px;
-  left: 8%;
-  position: absolute;
-  top: 68%;
   transform: rotate(-90deg);
   transform-origin: left center;
 }
 
 .hero-text-container {
   width: 100%;
+}
+
+.hero-bottom-container {
+  align-items: flex-end;
+  bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  left: 8%;
+  position: absolute;
+  right: 8%;
 }
 
 .hero-main-title {
@@ -1453,18 +1460,20 @@ a {
   .hero-main-title {
     font-size: 128px;
   }
+
   .side-email-link,
   .side-domain-text {
     font-size: 14px;
     left: 24px;
     top: 58%;
     }
-  }
+  
 
   .scroll-down-link {
-    right: calc(50% - 520px);
+    right: calc(50% - 520px)
   }
 }
+
 
 @media (min-width: 1920px) {
   .normal-text {

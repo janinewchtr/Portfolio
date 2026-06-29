@@ -1592,13 +1592,12 @@ a {
     font-size: 128px;
   }
 
-  .side-email-link,
-  .side-domain-text {
-    font-size: 14px;
-    left: 24px;
-    top: 58%;
-    }
-  
+  .side-email-link {
+    bottom: 8px;
+    left: 8%;
+    top: auto;
+    font-size: 18px;
+  }
 
   .scroll-down-link {
     right: calc(50% - 520px)

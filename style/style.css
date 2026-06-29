@@ -758,6 +758,35 @@ a {
   filter: grayscale(0%);
 }
 
+.portfolio-hover-arrow {
+  height: 96px;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 70%) rotate(180deg);
+  transform-origin: center;
+  transition: opacity 180ms ease, transform 260ms ease;
+  width: 96px;
+  z-index: 4;
+}
+
+.portfolio-project-card:hover .portfolio-hover-arrow {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(-100deg);
+}
+
+.portfolio-project-card-right .portfolio-hover-arrow {
+  left: auto;
+  right: 0;
+  transform: translate(50%, 70%) rotate(180deg);
+}
+
+.portfolio-project-card-right:hover .portfolio-hover-arrow {
+  transform: translate(50%, -50%) rotate(20deg);
+}
+
 /* ==================================================
    10. Contact
 ================================================== */

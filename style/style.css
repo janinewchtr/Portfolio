@@ -1230,7 +1230,7 @@ html[lang="en"] .policy-privacy-main-title {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
   .legal-header-container {
     padding: 28px 20px;
   }
@@ -1365,6 +1365,17 @@ html[lang="en"] .policy-privacy-main-title {
   box-shadow: 0 0 0 1000px var(--color-black) inset;
   caret-color: var(--color-cream-background);
   }
+
+  .contact-footer-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 46px;
+    position: static;
+    text-align: center;
+    width: 100%;
+}
 }
 
 @media (max-width: 540px) {
@@ -1475,17 +1486,6 @@ html[lang="en"] .policy-privacy-main-title {
 
   .contact-section {
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
-  }
-
-  .contact-footer-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    margin-top: 46px;
-    position: static;
-    text-align: center;
-    width: 100%;
   }
 
   .contact-footer-right {

@@ -284,11 +284,11 @@ a {
 }
 
 
-.side-domain-text {
-  font-size: 14px;
-  left: 4%;
+.side-email-link {
+  font-size: 18px;
+  left: 8%;
   position: absolute;
-  top: 55%;
+  top: 68%;
   transform: rotate(-90deg);
   transform-origin: left center;
 }
@@ -961,10 +961,9 @@ a {
 
   .header-language-button {
     font-size: 24px;
-}
+  }
 
 }
-
 
 @media (max-width: 1053px) {
   .hero-main-title {
@@ -1112,6 +1111,10 @@ a {
 
   .header-container {
     padding: 20px;
+  }
+
+  .header-language-container {
+    display: none;
   }
 
   .header-right-container {
@@ -1450,9 +1453,12 @@ a {
   .hero-main-title {
     font-size: 128px;
   }
-
+  .side-email-link,
   .side-domain-text {
-    left: calc(50% - 520px);
+    font-size: 14px;
+    left: 24px;
+    top: 58%;
+    }
   }
 
   .scroll-down-link {

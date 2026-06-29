@@ -328,7 +328,7 @@ a {
 
 .hero-main-title {
   font-family: "Syne", Arial, sans-serif;
-  font-size: 120px;
+  font-size: clamp(24px, 8vw, 120px);
   font-weight: 800;
   line-height: 0.9;
   max-width: 100%;
@@ -1043,10 +1043,6 @@ a {
 ================================================== */
 @media (max-width: 1244px) {
 
-  .hero-main-title {
-    font-size: 102px;
-  }
-
   .header-language-button {
     font-size: 24px;
   }
@@ -1058,9 +1054,6 @@ a {
 }
 
 @media (max-width: 1053px) {
-  .hero-main-title {
-    font-size: 72px;
-  }
 
   .hero-name-text{
     font-size: 32px;
@@ -1236,10 +1229,6 @@ a {
     padding-right: 20px;
   }
 
-  .hero-main-title {
-    font-size: 48px;
-  }
-
   .hero-line-and-name-container {
     align-items: flex-start;
     flex-direction: column;
@@ -1338,10 +1327,6 @@ a {
     height: 100dvh;
     min-height: 100dvh;
     overflow: hidden;
-  }
-
-  .hero-main-title {
-    font-size: 32px;
   }
 
   .legal-notice-main-title {
@@ -1509,7 +1494,7 @@ a {
     .hero-section {
     min-height: 100vh;
     min-height: 100dvh;
-    padding: 96px 20px 96px;
+    padding: 20px 20px 96px;
   }
 
   .scroll-down-link {
@@ -1534,7 +1519,7 @@ a {
 }
 
 .side-email-link{
-  font-size: 16px
+  font-size: 12px
 }
 
 .skills-title {
@@ -1588,15 +1573,11 @@ a {
     margin-right: auto;
   }
 
-  .hero-main-title {
-    font-size: 128px;
-  }
-
   .side-email-link {
     bottom: 8px;
     left: 8%;
     top: auto;
-    font-size: 18px;
+    font-size: 24px;
   }
 
   .scroll-down-link {

@@ -1457,10 +1457,15 @@ html[lang="en"] .policy-privacy-main-title {
   transform: translate(50%, -50%) rotate(20deg);
 }
 .section-scroll-arrow {
-  height: 90px;
-  margin-top: 10px;
-  margin-bottom: 28px;
-  width: 90px;
+  height: 150px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.section-scroll-arrow img {
+  height: 150px;
+  width: 150px;
 }
 }
 
@@ -1509,8 +1514,13 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .section-scroll-arrow {
-    height: 70px;
-    width: 70px;
+    height: 120px;
+    width: 100%;
+  }
+  
+  .section-scroll-arrow img {
+    height: 120px;
+    width: 120px;
   }
 
   .section-title {

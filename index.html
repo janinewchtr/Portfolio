@@ -6,6 +6,7 @@
     <title>Janine Wächter | Frontend Developer</title>
     <link rel="stylesheet" href="./style/style.css"/>
     <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
@@ -113,7 +114,7 @@
       </section>
 
       <section class="about-me-section" id="about-me">
-        <div class="about-me-text-container">
+        <div class="about-me-text-container" data-aos="fade-up">
           <h2 class="section-title" data-i18n="aboutTitle">Über mich</h2>
 
           <p class="normal-text" data-i18n="aboutText">
@@ -135,7 +136,7 @@
           <a class="small-button" href="#contact" data-i18n="aboutButton">Lass uns sprechen</a>
         </div>
 
-        <div class="portrait-image-container">
+        <div class="portrait-image-container" data-aos="fade-up">
           <img
             class="portrait-image"
             src="./assets/img/1C9A1711_resized.jpg"
@@ -148,7 +149,7 @@
       </a>
       <section class="skills-section" id="skills">
       
-        <div class="skills-box">
+        <div class="skills-box" data-aos="fade-up">
           <h2 class="skills-title" data-i18n="skillsTitle">Meine Skills</h2>
       
           <div class="skills-icons-container">
@@ -210,14 +211,14 @@
     </main>
 
     <section class="portfolio-section" id="portfolio">
-      <div class="portfolio-headline-container">
+      <div class="portfolio-headline-container" data-aos="fade-up">
         <h2 class="portfolio-title" data-i18n="portfolioTitle">Portfolio</h2>
         <p class="portfolio-intro-text" data-i18n="portfolioIntro">
           Hier findest du eine Auswahl meiner Projekte. Entdecke sie und gewinne einen Einblick in meine Fähigkeiten und Arbeitsweise.
         </p>
       </div>
     
-      <article class="portfolio-project-card">
+      <article class="portfolio-project-card" data-aos="fade-up">
         <div class="portfolio-project-info-container">
           <p class="portfolio-project-number">01/03</p>
       
@@ -249,7 +250,7 @@
         </div>
       </article>
     
-      <article class="portfolio-project-card portfolio-project-card-right">
+      <article class="portfolio-project-card portfolio-project-card-right" data-aos="fade-up">
         <div class="portfolio-project-info-container">
           <p class="portfolio-project-number">02/03</p>
       
@@ -281,7 +282,7 @@
         </div>
       </article>
       
-      <article class="portfolio-project-card">
+      <article class="portfolio-project-card" data-aos="fade-up">
         <div class="portfolio-project-info-container">
           <p class="portfolio-project-number">03/03</p>
       
@@ -317,7 +318,7 @@
       <img src="./assets/img/arrowleft.png" alt="" />
     </a>
 
-    <section class="contact-section" id="contact">
+    <section class="contact-section" id="contact" data-aos="fade-up">
       <img
         class="contact-arrow-top"
         src="./assets/img/7. arrow-up.png"
@@ -438,6 +439,7 @@
         </footer>
       </div>
     </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./scripts/translation.js"></script>
     <script src="script.js"></script>
   </body>

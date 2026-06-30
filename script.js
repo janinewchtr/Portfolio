@@ -241,3 +241,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mobilePortfolioMediaQuery.addEventListener("change", updatePortfolioScrollAnimation);
 });
+
+AOS.init({
+  duration: 800,
+  easing: "ease-in-out",
+  once: true,
+  offset: 220,
+});

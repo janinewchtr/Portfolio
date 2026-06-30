@@ -1767,7 +1767,7 @@ html[lang="en"] .policy-privacy-main-title {
   .skills-section,
   .portfolio-section,
   .contact-content-container {
-    max-width: 1520px;
+    max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1833,29 +1833,46 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .contact-section {
-    max-width: 1520px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
-
-  .contact-section .contact-footer-container {
-    align-items: flex-end;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    left: 50%;
+  
+  .contact-content-container {
     max-width: 1440px;
-    position: absolute;
-    transform: translateX(-50%);
-    width: calc(100% - 16%);
-  }
-
-  .legal-page-footer {
-    max-width: 1060px;
     margin-left: auto;
     margin-right: auto;
-    padding: 78px 34px;
   }
+  
+  .contact-section .contact-footer-container {
+    left: 0;
+    right: 0;
+    max-width: none;
+    transform: none;
+    width: 100%;
+  }
+  
+  .legal-page-footer {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: max(8%, calc((100% - 1060px) / 2));
+    padding-right: max(8%, calc((100% - 1060px) / 2));
+  }
+
+  .logo-link {
+    font-size: 48px;
+}
+
+.header-language-button{
+  font-size: 32px;
+}
+
+.burger-menu-icon {
+  height: 42px;
+  width: 42px;
+}
+
 }
 
 @media (min-width: 1920px) {

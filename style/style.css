@@ -41,6 +41,7 @@ body {
   background-color: var(--color-cream-background);
   color: var(--color-black);
   font-family: "Overpass", Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -1145,7 +1146,7 @@ html[lang="en"] .policy-privacy-main-title {
   cursor: pointer;
   display: block;
   height: 120px;
-  opacity: 0;
+  opacity: 1;
   pointer-events: auto;
   transition: opacity 180ms ease;
   width: 120px;
@@ -1169,10 +1170,6 @@ html[lang="en"] .policy-privacy-main-title {
   text-align: left;
 }
 
-.section-scroll-arrow.section-scroll-arrow-is-visible {
-  opacity: 1;
-}
-
 .section-scroll-arrow-right img {
   transform-origin: right center;
 }
@@ -1181,10 +1178,6 @@ html[lang="en"] .policy-privacy-main-title {
   transform-origin: left center;
 }
 
-.section-scroll-arrow-right:hover img,
-.section-scroll-arrow-left:hover img {
-  transform: scaleX(1.28);
-}
 /* ==================================================
    12. Media Queries
 ================================================== */

@@ -967,11 +967,11 @@ a {
   bottom: 0;
   display: flex;
   justify-content: space-between;
-  left: 50%;
-  max-width: 1440px;
+  left: 0;
   position: absolute;
-  transform: translateX(-50%);
-  width: calc(100% - 16%);
+  right: 0;
+  transform: none;
+  width: 100%;
 }
 
 .contact-logo-link {
@@ -1096,11 +1096,16 @@ html[lang="en"] .policy-privacy-main-title {
 
 .legal-page-footer {
   background-color: var(--color-black);
+  bottom: auto;
   clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 100%);
   color: var(--color-cream-background);
+  left: auto;
+  margin: 0;
+  max-width: none;
   min-height: 210px;
   padding: 78px max(8%, calc((100% - 1060px) / 2)) 34px;
   position: static;
+  right: auto;
   transform: none;
   width: 100%;
 }
@@ -1756,7 +1761,7 @@ html[lang="en"] .policy-privacy-main-title {
   .skills-section,
   .portfolio-section,
   .contact-content-container {
-    max-width: 1440px;
+    max-width: 1520px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1821,7 +1826,13 @@ html[lang="en"] .policy-privacy-main-title {
     transform: translateX(-50%);
   }
 
-  .contact-footer-container {
+  .contact-section {
+    max-width: 1520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-section .contact-footer-container {
     align-items: flex-end;
     bottom: 0;
     display: flex;
@@ -1831,6 +1842,13 @@ html[lang="en"] .policy-privacy-main-title {
     position: absolute;
     transform: translateX(-50%);
     width: calc(100% - 16%);
+  }
+
+  .legal-page-footer {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 78px 8% 34px;
   }
 }
 
@@ -1860,13 +1878,12 @@ html[lang="en"] .policy-privacy-main-title {
     font-size: 20px;
   }
 
-  .header-container,
   .hero-section,
   .about-me-section,
   .skills-section,
   .portfolio-section,
   .contact-content-container {
-    max-width: 1920px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
   }

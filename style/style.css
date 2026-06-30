@@ -1135,7 +1135,7 @@ html[lang="en"] .policy-privacy-main-title {
 .section-scroll-arrow-right {
   margin: 20px auto 40px;
   max-width: 1060px;
-  padding-right: 8%;
+  padding-right: 2%;
   text-align: right;
   width: 100%;
 }
@@ -1143,7 +1143,7 @@ html[lang="en"] .policy-privacy-main-title {
 .section-scroll-arrow-left {
   margin: 20px auto 40px;
   max-width: 1060px;
-  padding-left: 8%;
+  padding-left: 2%;
   text-align: left;
   width: 100%;
 }
@@ -1845,10 +1845,10 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .legal-page-footer {
-    max-width: 1440px;
+    max-width: 1060px;
     margin-left: auto;
     margin-right: auto;
-    padding: 78px 8% 34px;
+    padding: 78px 34px;
   }
 }
 

@@ -8,28 +8,6 @@ function closeMenu() {
   document.body.style.overflow = "";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const header = document.querySelector(".header-container");
-  const contactSection = document.querySelector(".contact-section");
-
-  if (!header || !contactSection) {
-    return;
-  }
-
-  const contactHeaderObserver = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        header.classList.toggle("header-is-on-contact", entry.isIntersecting);
-      });
-    },
-    {
-      rootMargin: "-80px 0px 0px 0px",
-      threshold: 0.01,
-    }
-  );
-
-  contactHeaderObserver.observe(contactSection);
-});
 
 function changeLanguage(language) {
   const texts = translations[language];
@@ -62,48 +40,6 @@ function changeLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("[data-language-button]").forEach((button) => {
-    button.addEventListener("click", function () {
-      changeLanguage(button.dataset.language);
-    });
-  });
-
-  const savedLanguage = localStorage.getItem("selectedLanguage") || "de";
-  changeLanguage(savedLanguage);
-});
-
-function getCurrentTranslationText(key) {
-  const selectedLanguage = localStorage.getItem("selectedLanguage") || "de";
-  return translations[selectedLanguage][key];
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  const sectionScrollArrows = document.querySelectorAll(".section-scroll-arrow");
-
-  if (!sectionScrollArrows.length) {
-    return;
-  }
-
-  const sectionArrowObserver = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        entry.target.classList.toggle(
-          "section-scroll-arrow-is-visible",
-          entry.isIntersecting
-        );
-      });
-    },
-    {
-      threshold: 0.5,
-    }
-  );
-
-  sectionScrollArrows.forEach(function (arrow) {
-    sectionArrowObserver.observe(arrow);
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
   const contactSubmitButton = document.getElementById("contactSubmitButton");
 
@@ -121,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  let privacyShouldShowError = false;
+  let formWasSubmitted = false;
 
   function isNameValid() {
     return contactNameInput.value.trim().length > 0;
@@ -137,76 +73,66 @@ document.addEventListener("DOMContentLoaded", function () {
     return contactPrivacyCheckbox.checked;
   }
 
-  function checkIfContactFormIsValid() {
-    const formIsValid = isNameValid() && isEmailValid() && isPrivacyChecked();
-  
+  function isContactFormValid() {
+    return isNameValid() && isEmailValid() && isPrivacyChecked();
+  }
+
+  function updateSubmitButtonStyle() {
     contactSubmitButton.classList.toggle(
       "contact-submit-button-is-disabled",
-      !formIsValid
+      !isContactFormValid()
     );
   }
-  
+
   function showNameError() {
-    nameError.textContent = isNameValid()
-      ? ""
-      : getCurrentTranslationText("nameError");
+    nameError.textContent = formWasSubmitted && !isNameValid()
+      ? getCurrentTranslationText("nameError")
+      : "";
   }
 
   function showEmailError() {
-    emailError.textContent = isEmailValid()
-      ? ""
-      : getCurrentTranslationText("emailError");
+    emailError.textContent = formWasSubmitted && !isEmailValid()
+      ? getCurrentTranslationText("emailError")
+      : "";
   }
 
   function showPrivacyError() {
-    privacyError.textContent = privacyShouldShowError && !isPrivacyChecked()
+    privacyError.textContent = formWasSubmitted && !isPrivacyChecked()
       ? getCurrentTranslationText("privacyError")
       : "";
   }
 
-  contactNameInput.addEventListener("focus", showNameError);
-
-  contactNameInput.addEventListener("input", function () {
+  function updateContactFormValidation() {
     showNameError();
-    checkIfContactFormIsValid();
-  });
-
-  contactEmailInput.addEventListener("focus", showEmailError);
-
-  contactEmailInput.addEventListener("input", function () {
     showEmailError();
-    checkIfContactFormIsValid();
-  });
-
-  contactPrivacyCheckbox.addEventListener("change", function () {
     showPrivacyError();
-    checkIfContactFormIsValid();
-  });
+    updateSubmitButtonStyle();
+  }
+
+  contactNameInput.addEventListener("input", updateContactFormValidation);
+  contactEmailInput.addEventListener("input", updateContactFormValidation);
+  contactPrivacyCheckbox.addEventListener("change", updateContactFormValidation);
 
   contactForm.addEventListener("submit", async function (event) {
     event.preventDefault();
-  
-    privacyShouldShowError = true;
-  
-    showNameError();
-    showEmailError();
-    showPrivacyError();
-    checkIfContactFormIsValid();
-  
-    if (!isNameValid() || !isEmailValid() || !isPrivacyChecked()) {
+
+    formWasSubmitted = true;
+    updateContactFormValidation();
+
+    if (!isContactFormValid()) {
       return;
     }
-  
+
     contactSubmitButton.disabled = true;
     contactStatusText.textContent = getCurrentTranslationText("sendingMessage");
-  
+
     const contactData = {
       name: contactNameInput.value.trim(),
       email: contactEmailInput.value.trim(),
       message: contactMessageInput.value.trim(),
       privacy: contactPrivacyCheckbox.checked,
     };
-  
+
     try {
       const response = await fetch("./send-mail.php", {
         method: "POST",
@@ -215,15 +141,15 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(contactData),
       });
-  
+
       const result = await response.json();
-  
+
       if (result.success) {
         contactStatusText.textContent = getCurrentTranslationText("successMessage");
         contactForm.reset();
-  
-        privacyShouldShowError = false;
-  
+
+        formWasSubmitted = false;
+
         nameError.textContent = "";
         emailError.textContent = "";
         privacyError.textContent = "";
@@ -233,12 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       contactStatusText.textContent = getCurrentTranslationText("technicalErrorMessage");
     }
-  
+
     contactSubmitButton.disabled = false;
-    checkIfContactFormIsValid();
+    updateSubmitButtonStyle();
   });
 
-  checkIfContactFormIsValid();
+  updateSubmitButtonStyle();
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -246,3 +246,8 @@ const translations = {
       technicalErrorMessage: "A technical problem occurred. Please try again later.",
     },
   };
+
+  function getCurrentTranslationText(key) {
+    const selectedLanguage = localStorage.getItem("selectedLanguage") || "de";
+    return translations[selectedLanguage]?.[key] || "";
+  }

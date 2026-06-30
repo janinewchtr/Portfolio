@@ -230,7 +230,7 @@ a {
   content: "";
   flex-shrink: 0;
   height: 58px;
-  transition: height 180ms ease, transform 180ms ease, width 220ms ease, border-width 120ms ease;
+  transition: transform 180ms ease, border-color 120ms ease;
   width: 46px;
 }
 
@@ -250,9 +250,9 @@ a {
 .menu-big-link:hover::before {
   border-bottom-width: 0;
   border-left-width: 0;
-  height: 0;
+  height: 58px;
   transform: translateY(58px);
-  width: 0;
+  width: 46px;
 }
 
 .menu-big-link:hover::after {

@@ -1,5 +1,7 @@
 const translations = {
     de: {
+      scrollDownText: "Scrollen",
+
       menuAbout: "Über mich",
       menuSkills: "Meine Skills",
       menuPortfolio: "Portfolio",
@@ -124,6 +126,8 @@ const translations = {
       },
   
     en: {
+      scrollDownText: "Scroll<br />Down",
+      
       menuAbout: "About me",
       menuSkills: "My skills",
       menuPortfolio: "Portfolio",

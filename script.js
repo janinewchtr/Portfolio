@@ -71,15 +71,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let formWasSubmitted = false;
+  let emailWasEdited = false;
 
   function isNameValid() {
     return contactNameInput.value.trim().length > 0;
   }
 
   function isEmailValid() {
-    return /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(
-      contactEmailInput.value.trim()
-    );
+    const emailValue = contactEmailInput.value.trim();
+  
+    if (emailValue.includes("..")) {
+      return false;
+    }
+  
+    return /^[A-Za-z0-9._%+-]+@([A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/.test(emailValue);
   }
 
   function isPrivacyChecked() {
@@ -104,7 +109,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showEmailError() {
-    emailError.textContent = formWasSubmitted && !isEmailValid()
+    const emailValue = contactEmailInput.value.trim();
+    const shouldShowEmailError =
+      formWasSubmitted || (emailWasEdited && emailValue.length > 0);
+  
+    emailError.textContent = shouldShowEmailError && !isEmailValid()
       ? getCurrentTranslationText("emailError")
       : "";
   }
@@ -123,7 +132,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   contactNameInput.addEventListener("input", updateContactFormValidation);
-  contactEmailInput.addEventListener("input", updateContactFormValidation);
+  contactEmailInput.addEventListener("input", function () {
+    emailWasEdited = true;
+    updateContactFormValidation();
+  });
   contactPrivacyCheckbox.addEventListener("change", updateContactFormValidation);
 
   contactForm.addEventListener("submit", async function (event) {
@@ -162,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactForm.reset();
 
         formWasSubmitted = false;
+        emailWasEdited = false;
 
         nameError.textContent = "";
         emailError.textContent = "";

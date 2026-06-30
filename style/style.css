@@ -1202,6 +1202,14 @@ html[lang="en"] .policy-privacy-main-title {
   transform-origin: left center;
 }
 
+.section-scroll-arrow-right:hover img {
+  transform: translate(10px, 10px) scaleX(1.25) scaleY(1.06);
+}
+
+.section-scroll-arrow-left:hover img {
+  transform: translate(-10px, 10px) scaleX(1.25) scaleY(1.06);
+}
+
 /* ==================================================
    12. Media Queries
 ================================================== */
@@ -1952,7 +1960,7 @@ html[lang="en"] .policy-privacy-main-title {
   .menu-big-link::after {
     width: 520px;
   }
-  
+
   .normal-text {
     font-size: 24px;
   }

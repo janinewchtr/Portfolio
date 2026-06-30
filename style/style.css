@@ -220,6 +220,7 @@ a {
   font-weight: 800;
   gap: 38px;
   line-height: 0.95;
+  position: relative;
 }
 
 .menu-big-link::before {
@@ -228,7 +229,33 @@ a {
   content: "";
   flex-shrink: 0;
   height: 58px;
+  transition: height 180ms ease, transform 180ms ease, width 220ms ease, border-width 120ms ease;
   width: 46px;
+}
+
+.menu-big-link::after {
+  background-color: var(--color-black);
+  bottom: -10px;
+  content: "";
+  height: 4px;
+  left: 84px;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 260ms ease 120ms;
+  width: calc(100% - 200px);
+}
+
+.menu-big-link:hover::before {
+  border-bottom-width: 0;
+  border-left-width: 0;
+  height: 0;
+  transform: translateY(58px);
+  width: 0;
+}
+
+.menu-big-link:hover::after {
+  transform: scaleX(1);
 }
 
 .menu-contact-section {
@@ -1169,9 +1196,6 @@ html[lang="en"] .policy-privacy-main-title {
    12. Media Queries
 ================================================== */
 @media (max-width: 1244px) {
-  .header-language-button {
-    font-size: 24px;
-  }
 
   .portfolio-hover-arrow {
     height: 78px;
@@ -1216,12 +1240,6 @@ html[lang="en"] .policy-privacy-main-title {
 
   .portfolio-project-card {
     gap: 32px;
-  }
-}
-
-@media (max-width: 950px) {
-  .menu-links-container {
-    margin: 200px auto 0;
   }
 }
 
@@ -1406,7 +1424,6 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .menu-big-link {
-    font-size: clamp(38px, 12vw, 62px);
     gap: 22px;
   }
 
@@ -1580,7 +1597,7 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .menu-big-link {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .menu-contact-title {
@@ -1751,6 +1768,10 @@ html[lang="en"] .policy-privacy-main-title {
 
   .contact-submit-button {
     font-size: 20px;
+  }
+
+  .menu-big-link{
+    font-size: 28px;
   }
 }
 

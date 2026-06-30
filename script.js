@@ -14,7 +14,7 @@ const translations = {
     menuSkills: "Meine Skills",
     menuPortfolio: "Portfolio",
 
-    heroTitle: "Frontend<br />Developerin",
+    heroTitle: "Frontend<br />Developer",
     aboutTitle: "Über mich",
     aboutText:
       "Ich bin Quereinsteigerin aus dem kaufmännischen Bereich und seit zwei Jahren in der IT tätig. Zur Programmierung hat mich der direkte Draht zwischen Idee und Ergebnis gebracht, also etwas zu bauen, das funktioniert und einen echten Unterschied macht. In meinem Arbeitsalltag verantworte ich IT-Projekte in einem mittelständischen Unternehmen, von der Systemeinführung über Projektleitung bis zur Steuerung interner Softwareprojekte. Durch meine Arbeit bringe ich ein Prozessverständnis mit, das mir hilft, Probleme sowohl aus der Entwickler- als auch aus der Endnutzerperspektive zu betrachten. Mit der Fullstack-Fortbildung baue ich meine Frontend-Skills jetzt gezielt weiter aus.",

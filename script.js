@@ -40,6 +40,19 @@ function changeLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  const savedLanguage = localStorage.getItem("selectedLanguage") || "de";
+
+  changeLanguage(savedLanguage);
+
+  document.querySelectorAll("[data-language-button]").forEach((button) => {
+    button.addEventListener("click", function () {
+      const selectedLanguage = button.dataset.language;
+      changeLanguage(selectedLanguage);
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
   const contactSubmitButton = document.getElementById("contactSubmitButton");
 

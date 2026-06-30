@@ -1092,6 +1092,62 @@ html[lang="en"] .policy-privacy-main-title {
 }
 
 /* ==================================================
+   11. Section Scroll
+================================================== */
+
+.section-scroll-arrow {
+  display: block;
+  height: 120px;
+  margin: 20px 8% 40px;
+  opacity: 0;
+  pointer-events: auto;
+  transition: opacity 180ms ease;
+  width: 120px;
+}
+
+.section-scroll-arrow img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.section-scroll-arrow-right {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.section-scroll-arrow-left {
+  margin-left: 8%;
+  margin-right: auto;
+}
+
+.section-scroll-arrow.section-scroll-arrow-is-visible {
+  opacity: 1;
+}
+
+.section-scroll-arrow-right.section-scroll-arrow-is-visible img {
+  animation: section-arrow-move-right 1.4s ease-in-out infinite;
+}
+
+.section-scroll-arrow-left.section-scroll-arrow-is-visible img {
+  animation: section-arrow-move-left 1.4s ease-in-out infinite;
+}
+
+@keyframes section-arrow-move-right {
+  0% {opacity: 0;transform: translate(-18px, -18px);}
+  30% {opacity: 1;}
+  70% {opacity: 1;transform: translate(12px, 12px);}
+  100% {opacity: 0;transform: translate(22px, 22px);}
+}
+
+@keyframes section-arrow-move-left {
+  0% {opacity: 0;transform: translate(18px, -18px);}
+  30% {opacity: 1;}
+  70% {opacity: 1;transform: translate(-12px, 12px);}
+  100% {opacity: 0;transform: translate(-22px, 22px);}
+}
+
+/* ==================================================
    12. Media Queries
 ================================================== */
 @media (max-width: 1244px) {
@@ -1400,6 +1456,12 @@ html[lang="en"] .policy-privacy-main-title {
 .portfolio-project-card-right.portfolio-project-is-visible .portfolio-hover-arrow {
   transform: translate(50%, -50%) rotate(20deg);
 }
+.section-scroll-arrow {
+  height: 90px;
+  margin-top: 10px;
+  margin-bottom: 28px;
+  width: 90px;
+}
 }
 
 @media (max-width: 540px) {
@@ -1444,6 +1506,11 @@ html[lang="en"] .policy-privacy-main-title {
   .portfolio-hover-arrow {
     height: 48px;
     width: 48px;
+  }
+
+  .section-scroll-arrow {
+    height: 70px;
+    width: 70px;
   }
 
   .section-title {

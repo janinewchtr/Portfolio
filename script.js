@@ -55,6 +55,32 @@ function getCurrentTranslationText(key) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  const sectionScrollArrows = document.querySelectorAll(".section-scroll-arrow");
+
+  if (!sectionScrollArrows.length) {
+    return;
+  }
+
+  const sectionArrowObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle(
+          "section-scroll-arrow-is-visible",
+          entry.isIntersecting
+        );
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
+
+  sectionScrollArrows.forEach(function (arrow) {
+    sectionArrowObserver.observe(arrow);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contactForm");
   const contactSubmitButton = document.getElementById("contactSubmitButton");
 

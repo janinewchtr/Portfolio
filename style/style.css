@@ -660,8 +660,13 @@ a {
   align-items: center;
   display: grid;
   gap: 72px;
-  grid-template-columns: 360px minmax(420px, 720px);
+  grid-template-columns: 360px 1fr;
   margin-bottom: 80px;
+  width: 100%;
+}
+
+.portfolio-project-card-right {
+  grid-template-columns: 1fr 360px;
 }
 
 .portfolio-project-card:hover .portfolio-project-hover-info {
@@ -678,10 +683,6 @@ a {
 .portfolio-image-wrapper:hover::after,
 .portfolio-project-card:hover .portfolio-image-wrapper::after {
   opacity: 1;
-}
-
-.portfolio-project-card-right {
-  grid-template-columns: minmax(420px, 720px) 360px;
 }
 
 .portfolio-project-card-right .portfolio-project-info-container {
@@ -1767,7 +1768,7 @@ html[lang="en"] .policy-privacy-main-title {
   .skills-section,
   .portfolio-section,
   .contact-content-container {
-    max-width: 1920px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1775,6 +1776,7 @@ html[lang="en"] .policy-privacy-main-title {
   .header-container {
     left: 50%;
     transform: translateX(-50%);
+    padding: 32px 1%;
   }
 
   .hero-section {
@@ -1783,28 +1785,66 @@ html[lang="en"] .policy-privacy-main-title {
 
   .hero-text-container {
     max-width: 980px;
-    margin-left: calc(auto);
+    margin-left: auto;
     margin-right: auto;
-    transform: translateX(-24px);
-  }
-
-  .side-email-link {
-    bottom: 8px;
-    left: 8%;
-    top: auto;
-    font-size: 24px;
+    transform: none;
   }
 
   .scroll-down-link {
-    right: calc(50% - 520px);
+    right: calc(50% - 620px);
   }
 
+  .about-me-section {
+    padding: 120px 2%;
+  }
+
+  .skills-section {
+    padding: 120px 2%;
+  }
+
+  .portfolio-section {
+    padding: 120px 2%;
+}
+
+
   .legal-header-container {
-    max-width: 1060px;
+    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
+  }
+
+  .legal-notice-content {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-section {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-content-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-section .contact-footer-container {
+    left: 0;
+    right: 0;
+    max-width: none;
+    transform: none;
+    width: 100%;
+  }
+
+  .legal-page-footer {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: max(8%, calc((100% - 1440px) / 2));
+    padding-right: max(8%, calc((100% - 1440px) / 2));
   }
 
   .menu-overlay {
@@ -1818,61 +1858,25 @@ html[lang="en"] .policy-privacy-main-title {
     transform: translate(-50%, 0);
   }
 
-  .menu-top-container {
-    max-width: 1060px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .menu-contact-section {
-    left: 50%;
-    max-width: 1440px;
-    transform: translateX(-50%);
-  }
-
-  .contact-section {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  
-  .contact-content-container {
+  .menu-header-container,
+  .menu-links-container {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .contact-section .contact-footer-container {
-    left: 0;
-    right: 0;
-    max-width: none;
-    transform: none;
-    width: 100%;
-  }
-  
-  .legal-page-footer {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: max(8%, calc((100% - 1060px) / 2));
-    padding-right: max(8%, calc((100% - 1060px) / 2));
   }
 
   .logo-link {
-    font-size: 48px;
-}
+    font-size: 32px;
+  }
 
-.header-language-button{
-  font-size: 32px;
-}
+  .header-language-button {
+    font-size: 28px;
+  }
 
-.burger-menu-icon {
-  height: 42px;
-  width: 42px;
-}
-
+  .burger-menu-icon {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -1899,16 +1903,6 @@ html[lang="en"] .policy-privacy-main-title {
 
   .portfolio-intro-text {
     font-size: 20px;
-  }
-
-  .hero-section,
-  .about-me-section,
-  .skills-section,
-  .portfolio-section,
-  .contact-content-container {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .header-container {

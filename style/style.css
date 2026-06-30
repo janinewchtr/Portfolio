@@ -68,15 +68,17 @@ a {
 
 .header-container {
   align-items: center;
+  background-color: var(--color-cream-background);
   display: flex;
   justify-content: space-between;
-  left: 0;
+  left: 50%;
+  max-width: 1440px;
   padding: 32px 8%;
-  top: 0;
-  width: 100%;
-  background-color: var(--color-cream-background);
-  z-index: 50;
   position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 50;
 }
 
 .logo-link {
@@ -1082,9 +1084,13 @@ a {
   background-color: var(--color-cream-background);
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
   padding: 42px 8%;
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 50;
 }
 
@@ -1375,16 +1381,56 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .contact-footer-container {
-    align-items: flex-start;
+    align-items: center;
+    display: flex;
     flex-direction: column;
     gap: 34px;
-    position: static;
     margin-top: 80px;
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .contact-footer-left,
+  .contact-footer-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-social-links-container {
+    justify-content: center;
   }
 
   .contact-scroll-top-link {
     bottom: 120px;
     right: 20px;
+  }
+
+  .legal-page-footer {
+    padding: 78px 20px 34px;
+  }
+  
+  .legal-page-footer .contact-footer-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    margin-top: 0;
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .legal-page-footer .contact-footer-left,
+  .legal-page-footer .contact-footer-right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .legal-page-footer .contact-social-links-container {
+    justify-content: center;
   }
 }
 
@@ -1861,8 +1907,6 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .header-container {
-    left: 50%;
-    transform: translateX(-50%);
     padding: 32px 1%;
   }
 
@@ -1902,11 +1946,9 @@ html[lang="en"] .policy-privacy-main-title {
   font-size: 28px;
 }
 
-  .legal-header-container {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.legal-header-container {
+  padding: 42px 1%;
+}
 
   .legal-notice-content {
     max-width: 1440px;

@@ -33,7 +33,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -41,7 +40,6 @@ body {
   background-color: var(--color-cream-background);
   color: var(--color-black);
   font-family: "Overpass", Arial, sans-serif;
-  overflow-x: hidden;
 }
 
 a {
@@ -58,6 +56,10 @@ button,
 a {
   color: inherit;
   -webkit-tap-highlight-color: transparent;
+}
+
+.page-scroll-is-locked {
+  overflow: hidden;
 }
 
 /* ==================================================
@@ -821,12 +823,12 @@ a {
 
 .portfolio-hover-arrow {
   height: 96px;
-  left: 0;
+  left: 12px;
   opacity: 0;
   pointer-events: none;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, 70%) rotate(180deg);
+  transform: translate(0, 70%) rotate(180deg);
   transform-origin: center;
   transition: opacity 180ms ease, transform 260ms ease;
   width: 96px;
@@ -835,17 +837,17 @@ a {
 
 .portfolio-project-card:hover .portfolio-hover-arrow {
   opacity: 1;
-  transform: translate(-50%, -50%) rotate(-100deg);
+  transform: translate(0, -50%) rotate(-100deg);
 }
 
 .portfolio-project-card-right .portfolio-hover-arrow {
   left: auto;
-  right: 0;
-  transform: translate(50%, 70%) rotate(180deg);
+  right: 12px;
+  transform: translate(0, 70%) rotate(180deg);
 }
 
 .portfolio-project-card-right:hover .portfolio-hover-arrow {
-  transform: translate(50%, -50%) rotate(20deg);
+  transform: translate(0, -50%) rotate(20deg);
 }
 
 /* ==================================================
@@ -1308,6 +1310,18 @@ html[lang="en"] .policy-privacy-main-title {
     gap: 42px;
   }
 
+  .portfolio-project-hover-info,
+.portfolio-project-card-right .portfolio-project-hover-info {
+  max-width: 100%;
+  transform: translateY(24px);
+  width: 100%;
+}
+
+.portfolio-project-card:hover .portfolio-project-hover-info,
+.portfolio-project-card.portfolio-project-is-visible .portfolio-project-hover-info {
+  transform: translateY(0);
+}
+
   .portfolio-project-info-container,
   .portfolio-project-card-right .portfolio-project-info-container {
     display: contents;
@@ -1529,12 +1543,12 @@ html[lang="en"] .policy-privacy-main-title {
 
   .portfolio-project-card.portfolio-project-is-visible .portfolio-hover-arrow {
     opacity: 1;
-    transform: translate(-50%, -50%) rotate(-100deg);
+    transform: translate(0, -50%) rotate(-100deg);
   }
 
   .portfolio-project-card-right.portfolio-project-is-visible
     .portfolio-hover-arrow {
-    transform: translate(50%, -50%) rotate(20deg);
+    transform: translate(0, -50%) rotate(20deg);
   }
   .section-scroll-arrow {
     height: 96px;
@@ -1789,6 +1803,10 @@ html[lang="en"] .policy-privacy-main-title {
     max-width: 42%;
     min-width: 90px;
   }
+
+  .hero-main-title {
+    font-size: 32px;
+}
 
   .hero-name-text {
     font-size: 18px;

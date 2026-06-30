@@ -1,13 +1,14 @@
 function openMenu() {
   document.getElementById("menuOverlay").classList.add("menu-is-open");
-  document.body.style.overflow = "hidden";
+  document.documentElement.classList.add("page-scroll-is-locked");
+  document.body.classList.add("page-scroll-is-locked");
 }
 
 function closeMenu() {
   document.getElementById("menuOverlay").classList.remove("menu-is-open");
-  document.body.style.overflow = "";
+  document.documentElement.classList.remove("page-scroll-is-locked");
+  document.body.classList.remove("page-scroll-is-locked");
 }
-
 
 function changeLanguage(language) {
   const texts = translations[language];

@@ -1582,6 +1582,8 @@ html[lang="en"] .policy-privacy-main-title {
   .section-scroll-arrow img {
     height: 120px;
     width: 120px;
+    opacity: 1;
+
   }
 
   .section-title {
@@ -1771,7 +1773,7 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .menu-big-link{
-    font-size: 28px;
+    font-size: 24px;
   }
 }
 

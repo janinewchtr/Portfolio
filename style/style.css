@@ -1230,7 +1230,46 @@ html[lang="en"] .policy-privacy-main-title {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .hero-text-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-main-title {
+    text-align: center;
+    font-size: 72px;
+  }
+
+  .hero-line-and-name-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 4px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .hero-title-line {
+    flex: 0 1 260px;
+    max-width: 52%;
+    min-width: 150px;
+    width: auto;
+  }
+  
+  .hero-name-text {
+    flex: 0 0 auto;
+    font-size: clamp(20px, 5vw, 32px);
+    line-height: 1;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
   .portfolio-project-card,
   .portfolio-project-card-right {
     display: flex;
@@ -1346,43 +1385,6 @@ html[lang="en"] .policy-privacy-main-title {
   .skills-section {
     padding-left: 20px;
     padding-right: 20px;
-  }
-
-  .hero-text-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero-main-title {
-    text-align: center;
-    font-size: 72px;
-  }
-
-  .hero-line-and-name-container {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 8px;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .hero-title-line {
-    flex: 0 1 60px;
-    min-width: 60px;
-    width: auto;
-  }
-
-  .hero-name-text {
-    flex: 0 0 auto;
-    font-size: 24px;
-    margin: 0;
-    white-space: nowrap;
   }
 
   .about-me-section {
@@ -1517,6 +1519,22 @@ html[lang="en"] .policy-privacy-main-title {
 }
 
 @media (max-width: 540px) {
+  .hero-line-and-name-container {
+    gap: 8px;
+    margin-top: 2px;
+  }
+  
+  .hero-title-line {
+    flex: 1 1 auto;
+    max-width: 58%;
+    min-width: 145px;
+  }
+  
+  .hero-name-text {
+    font-size: clamp(18px, 5.4vw, 24px);
+    white-space: nowrap;
+  }
+  
   .menu-overlay {
     height: 100dvh;
     min-height: 100dvh;
@@ -1722,6 +1740,19 @@ html[lang="en"] .policy-privacy-main-title {
 }
 
 @media (max-width: 398px) {
+  .hero-line-and-name-container {
+    gap: 6px;
+  }
+  
+  .hero-title-line {
+    max-width: 42%;
+    min-width: 120px;
+  }
+  
+  .hero-name-text {
+    font-size: 18px;
+  }
+
   .hero-main-title {
     font-size: 32px;
   }

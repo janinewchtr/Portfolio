@@ -1377,6 +1377,29 @@ html[lang="en"] .policy-privacy-main-title {
     text-align: center;
     width: 100%;
 }
+
+.portfolio-project-card.portfolio-project-is-visible .portfolio-project-hover-info {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.portfolio-project-card.portfolio-project-is-visible .portfolio-project-image {
+  filter: grayscale(0%);
+}
+
+.portfolio-project-card.portfolio-project-is-visible .portfolio-image-wrapper::after {
+  opacity: 1;
+}
+
+.portfolio-project-card.portfolio-project-is-visible .portfolio-hover-arrow {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(-100deg);
+}
+
+.portfolio-project-card-right.portfolio-project-is-visible .portfolio-hover-arrow {
+  transform: translate(50%, -50%) rotate(20deg);
+}
 }
 
 @media (max-width: 540px) {

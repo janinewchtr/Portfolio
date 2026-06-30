@@ -326,7 +326,7 @@ a {
 }
 
 .side-email-link {
-  bottom: 8px;
+  bottom: 40px;
   left: 8%;
   position: absolute;
   right: auto;
@@ -372,15 +372,20 @@ a {
 
 .hero-title-line {
   background-color: var(--color-black);
+  flex-shrink: 1;
   height: 2px;
+  min-width: 80px;
   width: 52%;
 }
 
 .hero-name-text {
   color: var(--color-green);
+  flex-shrink: 0;
   font-size: 48px;
   font-weight: 700;
+  line-height: 1;
   margin: 0;
+  white-space: nowrap;
 }
 
 .scroll-down-link {
@@ -422,7 +427,7 @@ a {
 }
 
 .scroll-text {
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -500,7 +505,26 @@ a {
 }
 
 .portrait-image-container {
+  position: relative;
   width: 100%;
+}
+
+.portrait-image-container::after {
+  border: 4px var(--color-green) solid;
+  content: "";
+  height: 100%;
+  left: -12px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 16px;
+  transition: opacity 180ms ease;
+  width: 100%;
+  z-index: 2;
+}
+
+.portrait-image-container:hover::after {
+  opacity: 1;
 }
 
 .portrait-image {
@@ -1269,7 +1293,7 @@ html[lang="en"] .policy-privacy-main-title {
     margin: 0;
     white-space: nowrap;
   }
-  
+
   .portfolio-project-card,
   .portfolio-project-card-right {
     display: flex;
@@ -1749,12 +1773,14 @@ html[lang="en"] .policy-privacy-main-title {
     min-width: 120px;
   }
   
-  .hero-name-text {
-    font-size: 18px;
+  .hero-title-line {
+    max-width: 42%;
+    min-width: 90px;
   }
 
-  .hero-main-title {
-    font-size: 32px;
+  .hero-name-text {
+    font-size: 18px;
+    white-space: nowrap;
   }
 
   .policy-privacy-main-title {
@@ -1837,6 +1863,14 @@ html[lang="en"] .policy-privacy-main-title {
     padding: 120px 2%;
 }
 
+.scroll-down-arrow-image {
+  height: 200px;
+  width: 200px;
+}
+
+.scroll-text {
+  font-size: 28px;
+}
 
   .legal-header-container {
     max-width: 1440px;

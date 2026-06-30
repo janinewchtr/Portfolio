@@ -8,6 +8,29 @@ function closeMenu() {
   document.body.style.overflow = "";
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".header-container");
+  const contactSection = document.querySelector(".contact-section");
+
+  if (!header || !contactSection) {
+    return;
+  }
+
+  const contactHeaderObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        header.classList.toggle("header-is-on-contact", entry.isIntersecting);
+      });
+    },
+    {
+      rootMargin: "-80px 0px 0px 0px",
+      threshold: 0.01,
+    }
+  );
+
+  contactHeaderObserver.observe(contactSection);
+});
+
 function changeLanguage(language) {
   const texts = translations[language];
 

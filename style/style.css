@@ -399,6 +399,7 @@ a {
   text-align: center;
 }
 
+
 /* ==================================================
    7. About Me
 ================================================== */
@@ -1098,53 +1099,52 @@ html[lang="en"] .policy-privacy-main-title {
 .section-scroll-arrow {
   display: block;
   height: 120px;
-  margin: 20px 8% 40px;
   opacity: 0;
   pointer-events: auto;
   transition: opacity 180ms ease;
   width: 120px;
+  cursor: pointer;
 }
 
 .section-scroll-arrow img {
-  height: 100%;
+  display: inline-block;
+  height: 200px;
   object-fit: contain;
-  width: 100%;
+  transition: transform 180ms ease;
+  width: 200px;
 }
 
 .section-scroll-arrow-right {
-  margin-left: auto;
-  margin-right: 10%;
+  margin: 20px auto 40px;
+  max-width: 1060px;
+  padding-right: 8%;
+  text-align: right;
+  width: 100%;
 }
 
 .section-scroll-arrow-left {
-  margin-left: 8%;
-  margin-right: auto;
+  margin: 20px auto 40px;
+  max-width: 1060px;
+  padding-left: 8%;
+  text-align: left;
+  width: 100%;
 }
 
 .section-scroll-arrow.section-scroll-arrow-is-visible {
   opacity: 1;
 }
 
-.section-scroll-arrow-right.section-scroll-arrow-is-visible img {
-  animation: section-arrow-move-right 1.4s ease-in-out infinite;
+.section-scroll-arrow-right img {
+  transform-origin: right center;
 }
 
-.section-scroll-arrow-left.section-scroll-arrow-is-visible img {
-  animation: section-arrow-move-left 1.4s ease-in-out infinite;
+.section-scroll-arrow-left img {
+  transform-origin: left center;
 }
 
-@keyframes section-arrow-move-right {
-  0% {opacity: 0;transform: translate(-18px, -18px);}
-  30% {opacity: 1;}
-  70% {opacity: 1;transform: translate(12px, 12px);}
-  100% {opacity: 0;transform: translate(22px, 22px);}
-}
-
-@keyframes section-arrow-move-left {
-  0% {opacity: 0;transform: translate(18px, -18px);}
-  30% {opacity: 1;}
-  70% {opacity: 1;transform: translate(-12px, 12px);}
-  100% {opacity: 0;transform: translate(-22px, 22px);}
+.section-scroll-arrow-right:hover img,
+.section-scroll-arrow-left:hover img {
+  transform: scaleX(1.28);
 }
 
 /* ==================================================
@@ -1763,4 +1763,21 @@ html[lang="en"] .policy-privacy-main-title {
   .portfolio-intro-text {
     font-size: 20px;
   }
+
+  .header-container,
+  .hero-section,
+  .about-me-section,
+  .skills-section,
+  .portfolio-section,
+  .contact-content-container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 }

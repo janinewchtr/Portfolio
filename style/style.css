@@ -1906,7 +1906,7 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .header-container {
-    padding: 32px 1%;
+    padding: 32px 8%;
   }
 
   .hero-section {
@@ -1925,15 +1925,15 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .about-me-section {
-    padding: 120px 2%;
+    padding: 120px 8%;
   }
 
   .skills-section {
-    padding: 120px 2%;
+    padding: 120px 8%;
   }
 
   .portfolio-section {
-    padding: 120px 2%;
+    padding: 120px 8%;
 }
 
 .scroll-down-arrow-image {
@@ -1975,12 +1975,14 @@ html[lang="en"] .policy-privacy-main-title {
     width: 100%;
   }
 
+  .contact-section .contact-footer-container {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
   .legal-page-footer {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: max(8%, calc((100% - 1440px) / 2));
-    padding-right: max(8%, calc((100% - 1440px) / 2));
+    padding-left: max(8%, calc((100% - 1440px) / 2 + 14px));
+    padding-right: max(8%, calc((100% - 1440px) / 2 + 14px));
   }
 
   .menu-overlay {

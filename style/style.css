@@ -73,7 +73,7 @@ a {
   justify-content: space-between;
   left: 50%;
   max-width: 1440px;
-  padding: 32px 8%;
+  padding: 32px 60px;
   position: fixed;
   top: 0;
   transform: translateX(-50%);
@@ -83,7 +83,7 @@ a {
 
 .logo-link {
   font-family: "Syne", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 800;
 }
 
@@ -104,7 +104,7 @@ a {
   border: 0;
   cursor: pointer;
   font-family: "Syne", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 28px;
   font-weight: 800;
   padding: 4px 8px;
 }
@@ -213,7 +213,7 @@ a {
   gap: 34px;
   margin: 80px auto 0;
   max-width: 760px;
-  padding: 0 8% 240px;
+  padding: 0 60px 240px;
   width: 100%;
 }
 
@@ -272,7 +272,7 @@ a {
   justify-content: space-between;
   left: 0;
   min-height: 220px;
-  padding: 74px 8% 36px;
+  padding: 74px 60px 36px;
   position: absolute;
   width: 100%;
 }
@@ -442,7 +442,7 @@ a {
   display: grid;
   gap: 72px;
   grid-template-columns: 1fr 360px;
-  padding: 120px 8%;
+  padding: 120px 60px;
 }
 
 .section-title {
@@ -659,7 +659,7 @@ a {
 ================================================== */
 
 .portfolio-section {
-  padding: 120px 8%;
+  padding: 120px 60px;
 }
 
 .portfolio-headline-container {
@@ -1087,7 +1087,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
-  padding: 42px 8%;
+  padding: 42px 60px;
   position: sticky;
   top: 0;
   width: 100%;
@@ -1907,7 +1907,7 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .header-container {
-    padding: 32px 8%;
+    padding: 32px 60px;
   }
 
   .hero-section {
@@ -1930,7 +1930,7 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .skills-section {
-    padding: 120px 8%;
+    padding: 120px 60px;
   }
 
   .portfolio-section {
@@ -1947,7 +1947,7 @@ html[lang="en"] .policy-privacy-main-title {
 }
 
 .legal-header-container {
-  padding: 42px 8%;
+  padding: 42px 60px;
 }
 
   .legal-notice-content {
@@ -1977,13 +1977,13 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .contact-section .contact-footer-container {
-    padding-left:8%;
-    padding-right: 8%;
+    padding-left:60px;
+    padding-right: 60px;
   }
 
   .legal-page-footer {
-    padding-left: max(8%, calc((100% - 1440px) / 2 + 14px));
-    padding-right: max(8%, calc((100% - 1440px) / 2 + 14px));
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .menu-overlay {
@@ -2052,4 +2052,9 @@ html[lang="en"] .policy-privacy-main-title {
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .contact-main-title {
+    padding-left: 10%;
 }
+}
+

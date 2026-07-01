@@ -13,22 +13,26 @@
   <body>
     <header class="legal-header-container">
       <a class="logo-link" href="./index.html#home">[JW]</a>
-      <div class="header-language-container">
-        <button class="header-language-button" type="button" data-language-button data-language="en">
-          EN
-        </button>
-        <button class="header-language-button active-language" type="button" data-language-button data-language="de">
-          DE
+    
+      <div class="header-right-container">
+        <div class="header-language-container">
+          <button class="header-language-button" type="button" data-language-button data-language="en">
+            EN
+          </button>
+    
+          <button class="header-language-button active-language" type="button" data-language-button data-language="de">
+            DE
+          </button>
+        </div>
+    
+        <button class="burger-menu-button" type="button" onclick="openMenu()">
+          <img
+            class="burger-menu-icon"
+            src="./assets/img/12. burger menu S3.png"
+            alt="Menü öffnen"
+          />
         </button>
       </div>
-
-      <button class="burger-menu-button" type="button" onclick="openMenu()">
-        <img
-          class="burger-menu-icon"
-          src="./assets/img/12. burger menu S3.png"
-          alt="Menü öffnen"
-        />
-      </button>
     </header>
 
     <div class="menu-overlay" id="menuOverlay">

@@ -1,6 +1,5 @@
 function openMenu() {
   document.getElementById("menuOverlay").classList.add("menu-is-open");
-  document.documentElement.classList.add("page-scroll-is-locked");
   document.body.classList.add("page-scroll-is-locked");
 }
 

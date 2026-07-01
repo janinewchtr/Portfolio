@@ -321,7 +321,6 @@ a {
   align-items: center;
   display: flex;
   justify-content: center;
-  overflow: hidden;
   min-height: 100vh;
   min-height: 100dvh;
   padding: 110px 8% 120px;

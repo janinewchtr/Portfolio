@@ -885,6 +885,7 @@ a {
   font-weight: 800;
   line-height: 1;
   margin: 0;
+  padding-left: 4%;
 }
 
 .contact-form-container {
@@ -1946,7 +1947,7 @@ html[lang="en"] .policy-privacy-main-title {
 }
 
 .legal-header-container {
-  padding: 42px 1%;
+  padding: 42px 8%;
 }
 
   .legal-notice-content {
@@ -1976,8 +1977,8 @@ html[lang="en"] .policy-privacy-main-title {
   }
 
   .contact-section .contact-footer-container {
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left:8%;
+    padding-right: 8%;
   }
 
   .legal-page-footer {

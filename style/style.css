@@ -1156,14 +1156,25 @@ html[lang="en"] .policy-privacy-main-title {
 
 .legal-page-footer {
   background-color: var(--color-black);
-  bottom: auto;
   clip-path: polygon(0 0, 100% 18%, 100% 100%, 0 100%);
   color: var(--color-cream-background);
-  left: auto;
   margin: 0;
-  max-width: none;
   min-height: 210px;
-  padding: 78px max(8%, calc((100% - 1060px) / 2)) 34px;
+  padding: 78px 0 34px;
+  width: 100%;
+}
+
+.legal-footer-inner {
+  align-items: flex-end;
+  bottom: auto;
+  display: flex;
+  justify-content: space-between;
+  left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  padding-left: 60px;
+  padding-right: 60px;
   position: static;
   right: auto;
   transform: none;
@@ -1978,11 +1989,6 @@ html[lang="en"] .policy-privacy-main-title {
 
   .contact-section .contact-footer-container {
     padding-left:60px;
-    padding-right: 60px;
-  }
-
-  .legal-page-footer {
-    padding-left: 60px;
     padding-right: 60px;
   }
 

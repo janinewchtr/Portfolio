@@ -542,6 +542,7 @@ a {
 .skills-section {
   padding: 120px 8%;
   position: relative;
+  scroll-margin-top: 120px;
 }
 
 .skills-box {

@@ -1540,6 +1540,10 @@ html[lang="en"] .policy-privacy-main-title {
   .skills-box {
     padding: 56px 32px 48px;
   }
+  
+  .skills-section{
+    scroll-margin-top: 40px;
+  }
 
   .skills-icons-container {
     grid-template-columns: repeat(2, 1fr);
